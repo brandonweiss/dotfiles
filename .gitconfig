@@ -1,0 +1,36 @@
+[user]
+  name = Brandon Weiss
+  email = brandon@anti-pattern.com
+[core]
+  excludesfile = ~/.gitignore
+  autocrlf     = input
+[diff]
+  # For Github-style word diffs
+  wordRegex = [^[:space:]]
+[color]
+  ui          = auto
+  diff        = auto
+  interactive = auto
+  status      = auto
+  branch      = auto
+[github]
+  user  = brandonweiss
+[alias]
+  s   = status -sb
+  l   = "!source ~/.githelpers && pretty_git_log"
+  r   = !git l -20
+  ra  = !git r --all
+  lg  = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+  d   = diff
+  dc  = diff --cached
+  dm  = diff | mate
+  co  = checkout
+  cob = checkout -b
+  b   = branch
+  c   = commit -m
+  ca  = commit -a -m
+  cp  = commit -am 'cp'
+  w   = whatchanged
+  sl  = shortlog -s -n
+[push]
+  default = upstream
