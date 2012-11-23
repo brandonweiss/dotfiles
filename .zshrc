@@ -71,7 +71,7 @@ defaults write com.apple.screencapture type -string "png"
 # defaults write NSGlobalDomain AppleFontSmoothing -int 2
 
 # Autojump
-[[ -f `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
+[[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
 
 alias e="subl -n ."
 
