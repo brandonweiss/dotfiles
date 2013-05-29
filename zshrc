@@ -28,13 +28,13 @@ plugins=(git brew)
 
 source $ZSH/oh-my-zsh.sh
 
-# Customize to your needs...
-export PATH=/usr/local/bin:/usr/local/sbin:/usr/local/share/npm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin
+export PATH=/usr/local/bin:/usr/local/sbin:$HOME/.rbenv/bin:/usr/local/share/npm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin
 
-# Added by the Heroku Toolbelt
+# Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
-source $HOME/.zshenv
+# rbenv
+eval "$(rbenv init -)"
 
 ZSH_THEME_GIT_PROMPT_PREFIX="(%{$fg[red]%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
