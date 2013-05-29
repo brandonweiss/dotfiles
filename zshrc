@@ -48,9 +48,9 @@ ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[blue]%}) %{$fg[yellow]%}✗%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[blue]%})"
 
 # Environemnt
-export EDITOR='subl -w'
-export GIT_EDITOR='subl -wl1'
-export NODE_PATH=/usr/local/lib/node_modules:$NODE_PATH
+export EDITOR="subl -w"
+export GIT_EDITOR="subl -wl1"
+export NODE_PATH="/usr/local/lib/node_modules:$NODE_PATH"
 export NODE_PATH="$HOME/node_modules/.bin:$NODE_PATH"
 
 source $HOME/.extras/osx_settings
