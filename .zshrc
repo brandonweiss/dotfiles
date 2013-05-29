@@ -52,6 +52,9 @@ export NODE_PATH="$HOME/node_modules/.bin:$NODE_PATH"
 # Unhide the Library folder
 chflags nohidden ~/Library
 
+# Disable Chrome's print preview
+defaults write com.google.Chrome DisablePrintPreview -boolean true
+
 # Expand save panel by default
 defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
 
