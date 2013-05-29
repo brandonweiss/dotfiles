@@ -55,9 +55,6 @@ export NODE_PATH="$HOME/node_modules/.bin:$NODE_PATH"
 
 source $HOME/.extras/osx_settings
 
-# Autojump
-[[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
-
 alias e="subl -n ."
 alias dots="subl ~/Code/dotfiles"
 alias reload='source ~/.zshrc && echo "sourced ~/.zshrc"'
@@ -75,7 +72,6 @@ alias rs="rails server"
 alias rsd="rails server --debugger"
 alias rc="rails console"
 
-# Passenger
 alias rst="touch tmp/restart.txt && echo touched tmp/restart.txt"
 
 # Processes
