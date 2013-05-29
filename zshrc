@@ -53,16 +53,12 @@ export GIT_EDITOR='subl -wl1'
 export NODE_PATH=/usr/local/lib/node_modules:$NODE_PATH
 export NODE_PATH="$HOME/node_modules/.bin:$NODE_PATH"
 
-# Miscellaneous
-
 source $HOME/.extras/osx_settings
 
 # Autojump
 [[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
 
 alias e="subl -n ."
-
-# Management
 alias dots="subl ~/Code/dotfiles"
 alias reload='source ~/.zshrc && echo "sourced ~/.zshrc"'
 
