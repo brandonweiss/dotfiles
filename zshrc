@@ -28,10 +28,16 @@ plugins=(git brew)
 
 source $ZSH/oh-my-zsh.sh
 
-export PATH=/usr/local/bin:/usr/local/sbin:$HOME/.rbenv/bin:/usr/local/share/npm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin
-
-# Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
+export PATH="/usr/X11/bin"
+export PATH="/sbin:$PATH"
+export PATH="/usr/sbin:$PATH"
+export PATH="/bin:$PATH"
+export PATH="/usr/bin:$PATH"
+export PATH="/usr/local/share/npm/bin:$PATH" # npm
+export PATH="$HOME/.rbenv/bin:$PATH"         # rbenv
+export PATH="/usr/local/sbin:$PATH"          # Homebrew
+export PATH="/usr/local/bin:$PATH"           # Homebrew
+export PATH="/usr/local/heroku/bin:$PATH"    # Heroku Toolbelt
 
 # rbenv
 eval "$(rbenv init -)"
