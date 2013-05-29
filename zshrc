@@ -56,17 +56,12 @@ source $HOME/.extras/osx_settings
 
 alias e="subl -n ."
 
-# Color
-alias ls="ls -G"
-
 # Management
 alias dots="subl ~/Code/dotfiles"
 alias reload='source ~/.zshrc && echo "sourced ~/.zshrc"'
 
 # Aliases
 alias g="git"
-alias gl="echo STOP using this alias, it was a bad idea."
-alias gs="echo STOP using this alias, it was a bad idea."
 
 alias be="bundle exec"
 alias bers="bundle exec rails server"
