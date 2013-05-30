@@ -59,20 +59,11 @@ alias e="subl -n ."
 alias dots="subl ~/Code/dotfiles"
 alias reload='source ~/.zshrc && echo "sourced ~/.zshrc"'
 
-# Aliases
-alias g="git"
-
 alias be="bundle exec"
 alias bers="bundle exec rails server"
 alias bersd="bundle exec rails server --debugger"
 alias berc="bundle exec rails console"
 
-# Rails
-alias rs="rails server"
-alias rsd="rails server --debugger"
-alias rc="rails console"
-
 alias rst="touch tmp/restart.txt && echo touched tmp/restart.txt"
 
-# Processes
 alias psf="ps -x | grep -v grep | grep"
