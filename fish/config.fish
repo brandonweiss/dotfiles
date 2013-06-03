@@ -9,8 +9,8 @@ set PATH "/usr/local/heroku/bin"    $PATH # Heroku Toolbelt
 
 rbenv rehash >/dev/null ^&1
 
-set EDITOR     "subl -w"
-set GIT_EDITOR "subl -wl1"
+set -x EDITOR     "subl -w"
+set -x GIT_EDITOR "subl -wl1"
 set NODE_PATH  "/usr/local/lib/node_modules" $NODE_PATH
 set NODE_PATH  "$HOME/node_modules/.bin"     $NODE_PATH
 
