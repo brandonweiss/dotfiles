@@ -1,6 +1,7 @@
 set -g fish_greeting ""
 
 set PATH "/usr/local/share/npm/bin" $PATH # npm
+set PATH "./node_modules/.bin"      $PATH # local npm
 set PATH "$HOME/.rbenv/bin"         $PATH # rbenv
 set PATH "$HOME/.rbenv/shims"       $PATH # rbenv
 set PATH "/usr/local/sbin"          $PATH # Homebrew
