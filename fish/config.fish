@@ -7,6 +7,7 @@ set PATH "$HOME/.rbenv/shims"       $PATH # rbenv
 set PATH "/usr/local/sbin"          $PATH # Homebrew
 set PATH "/usr/local/bin"           $PATH # Homebrew
 set PATH "/usr/local/heroku/bin"    $PATH # Heroku Toolbelt
+set PATH "./bin"                    $PATH # Project-specific binstubs
 
 rbenv rehash >/dev/null ^&1
 
