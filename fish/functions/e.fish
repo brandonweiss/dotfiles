@@ -1,3 +1,3 @@
 function e
-  subl -n .
+  atom
 end
