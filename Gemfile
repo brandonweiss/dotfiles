@@ -1,4 +1,4 @@
 source "https://rubygems.org"
 ruby   "2.0.0"
 
-gem "thor"
+gem "thor", "~> 0.19.1"
