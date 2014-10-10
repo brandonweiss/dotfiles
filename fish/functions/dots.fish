@@ -1,3 +1,3 @@
 function dots
-  subl ~/Code/dotfiles
+  e ~/Code/dotfiles
 end
