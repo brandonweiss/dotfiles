@@ -1,0 +1,21 @@
+'exception-reporting': {}
+'release-notes': {}
+'welcome':
+  'showOnStartup': false
+'metrics': {}
+'editor': {}
+'core':
+  'ignoredNames': [
+    '.bundle'
+    '.git'
+    '.DS_Store'
+  ]
+  'useReactEditor': true
+'test-status':
+  'Rakefile': '/usr/local/bin/rbenv exec bundle exec rake test'
+'runner':
+  'scopes':
+    'ruby': '/usr/local/bin/rbenv exec ruby'
+'tree-view':
+  'hideIgnoredNames': true
+  'hideVcsIgnoredFiles': true
