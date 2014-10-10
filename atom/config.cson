@@ -1,21 +1,40 @@
 'exception-reporting':
-  'userId': 'f6d9e5dd-a890-0ea7-0d47-bcfdca90e541'
+  'userId': 'd860e2ce-b841-f643-3414-b61df9ea2275'
 'metrics':
   'userId': '78d13bac588a8fc8b6c7e7e5427cd45c06007882'
-'welcome':
-  'showOnStartup': false
 'core':
+  'disabledPackages': [
+    'emmet'
+    'language-php'
+    'language-java'
+    'language-c'
+    'language-objective-c'
+    'language-perl'
+    'language-python'
+    'welcome'
+    'atom-html-preview'
+  ]
   'ignoredNames': [
     '.bundle'
     '.git'
     '.DS_Store'
   ]
+  'themes': [
+    'spacegray-dark-ui'
+    'base16-atelierlakeside-dark-syntax'
+  ]
   'useReactEditor': true
-'test-status':
-  'Rakefile': '/usr/local/bin/rbenv exec bundle exec rake test'
+'editor':
+  'fontSize': 18
+  'showIndentGuide': true
+  'softWrapAtPreferredLineLength': true
 'runner':
   'scopes':
     'ruby': '/usr/local/bin/rbenv exec ruby'
+'test-status':
+  'Rakefile': '/usr/local/bin/rbenv exec bundle exec rake test'
 'tree-view':
   'hideIgnoredNames': true
   'hideVcsIgnoredFiles': true
+'welcome':
+  'showOnStartup': false
