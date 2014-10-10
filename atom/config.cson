@@ -1,9 +1,9 @@
-'exception-reporting': {}
-'release-notes': {}
+'exception-reporting':
+  'userId': 'f6d9e5dd-a890-0ea7-0d47-bcfdca90e541'
+'metrics':
+  'userId': '78d13bac588a8fc8b6c7e7e5427cd45c06007882'
 'welcome':
   'showOnStartup': false
-'metrics': {}
-'editor': {}
 'core':
   'ignoredNames': [
     '.bundle'
