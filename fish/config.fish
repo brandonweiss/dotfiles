@@ -13,7 +13,8 @@ rbenv rehash >/dev/null ^&1
 
 set -x EDITOR     "atom --wait"
 set -x GIT_EDITOR "atom --wait"
-set NODE_PATH  "/usr/local/lib/node_modules" $NODE_PATH
-set NODE_PATH  "$HOME/node_modules/.bin"     $NODE_PATH
+
+set NODE_PATH "/usr/local/lib/node_modules" $NODE_PATH
+set NODE_PATH "$HOME/node_modules/.bin"     $NODE_PATH
 
 source "$HOME/.extras/osx_settings"
