@@ -1,10 +1,10 @@
 function download
   set url $argv[1]
 
+  set filename (echo (basename $url) | sed 's/?.*//g')
+
   if test (count $argv) -eq 2
-    set filename $argv[2]
-  else
-    set filename (echo (basename $url) | sed 's/?.*//g')
+    set filename $argv[2]-$filename
   end
 
   set file ~/Downloads/$filename
