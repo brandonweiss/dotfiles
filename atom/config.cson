@@ -1,40 +1,45 @@
-'exception-reporting':
-  'userId': 'd860e2ce-b841-f643-3414-b61df9ea2275'
-'metrics':
-  'userId': '78d13bac588a8fc8b6c7e7e5427cd45c06007882'
-'core':
-  'disabledPackages': [
-    'emmet'
-    'language-php'
-    'language-java'
-    'language-c'
-    'language-objective-c'
-    'language-perl'
-    'language-python'
-    'welcome'
-    'atom-html-preview'
-  ]
-  'ignoredNames': [
-    '.bundle'
-    '.git'
-    '.DS_Store'
-  ]
-  'themes': [
-    'spacegray-dark-ui'
-    'base16-atelierlakeside-dark-syntax'
-  ]
-  'useReactEditor': true
-'editor':
-  'fontSize': 18
-  'showIndentGuide': true
-  'softWrapAtPreferredLineLength': true
-'runner':
-  'scopes':
-    'ruby': '/usr/local/bin/rbenv exec ruby'
-'test-status':
-  'Rakefile': '/usr/local/bin/rbenv exec bundle exec rake test'
-'tree-view':
-  'hideIgnoredNames': true
-  'hideVcsIgnoredFiles': true
-'welcome':
-  'showOnStartup': false
+'*':
+  'exception-reporting':
+    'userId': 'd860e2ce-b841-f643-3414-b61df9ea2275'
+  'metrics':
+    'userId': '78d13bac588a8fc8b6c7e7e5427cd45c06007882'
+  'welcome':
+    'showOnStartup': false
+  'core':
+    'ignoredNames': [
+      '.bundle'
+      '.git'
+      '.DS_Store'
+      'node_modules'
+    ]
+    'disabledPackages': [
+      'emmet'
+      'language-php'
+      'language-java'
+      'language-c'
+      'language-objective-c'
+      'language-perl'
+      'welcome'
+      'atom-html-preview'
+    ]
+    'themes': [
+      'spacegray-dark-ui'
+      'base16-atelierlakeside-dark-syntax'
+    ]
+  'test-status': {}
+  'runner':
+    'scopes':
+      'ruby': '/usr/local/bin/rbenv exec ruby'
+  'tree-view':
+    'hideVcsIgnoredFiles': true
+    'hideIgnoredNames': true
+  'editor':
+    'fontSize': 18
+    'showIndentGuide': true
+    'softWrapAtPreferredLineLength': true
+    'invisibles': {}
+'.python.source':
+  'editor':
+    'tabLength': 2
+'.diff.source':
+  'editor': {}
