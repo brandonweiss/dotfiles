@@ -21,10 +21,8 @@
   l   = "!source ~/.githelpers && pretty_git_log"
   r   = !git l -20
   ra  = !git r --all
-  lg  = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
   d   = diff
   dc  = diff --cached
-  dm  = diff | mate
   co  = checkout
   cob = checkout -b
   b   = branch
