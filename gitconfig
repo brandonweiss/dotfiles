@@ -17,10 +17,15 @@
 [github]
   user  = brandonweiss
 [alias]
+  # r  = recent commits, only current branch
+  # ra = recent commits, all reachable refs
+  # l  = all commits, only current branch
+  # la = all commits, all reachable refs
   s   = status -sb
-  l   = "!source ~/.githelpers && pretty_git_log"
-  r   = !git l -20
+  r   = !GIT_NO_PAGER=1 git l -30
   ra  = !git r --all
+  l   = "!. ~/.githelpers && pretty_git_log"
+  la  = !git l --all
   d   = diff
   dc  = diff --cached
   co  = checkout
