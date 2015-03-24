@@ -22,9 +22,9 @@
       'welcome'
       'atom-html-preview'
     ]
-    'themes': [
-      'spacegray-dark-ui'
-      'base16-atelierlakeside-dark-syntax'
+    themes: [
+      "one-dark-ui"
+      "one-dark-syntax"
     ]
   'test-status': {}
   'runner':
