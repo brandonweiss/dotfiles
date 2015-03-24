@@ -1,16 +1,16 @@
-'*':
-  'exception-reporting':
-    'userId': 'd860e2ce-b841-f643-3414-b61df9ea2275'
-  'metrics':
-    'userId': '78d13bac588a8fc8b6c7e7e5427cd45c06007882'
-  'welcome':
-    'showOnStartup': false
   'core':
     'ignoredNames': [
       '.bundle'
       '.git'
       '.DS_Store'
       'node_modules'
+"*":
+  "exception-reporting":
+    userId: "d860e2ce-b841-f643-3414-b61df9ea2275"
+  metrics:
+    userId: "78d13bac588a8fc8b6c7e7e5427cd45c06007882"
+  welcome:
+    showOnStartup: false
     ]
     disabledPackages: [
       "emmet"
@@ -28,21 +28,21 @@
       "one-dark-ui"
       "one-dark-syntax"
     ]
-  'test-status': {}
-  'runner':
-    'scopes':
-      'ruby': '/usr/local/bin/rbenv exec ruby'
-  'tree-view':
-    'hideVcsIgnoredFiles': true
-    'hideIgnoredNames': true
-'.python.source':
-  'editor':
-    'tabLength': 2
 '.diff.source':
   'editor': {}
+  "test-status": {}
+  runner:
+    scopes:
+      ruby: "/usr/local/bin/rbenv exec ruby"
+  "tree-view":
+    hideVcsIgnoredFiles: true
+    hideIgnoredNames: true
   editor:
     showIndentGuide: true
     autoIndentOnPaste: false
     softWrapAtPreferredLineLength: true
     invisibles: {}
     fontSize: 18
+".python.source":
+  editor:
+    tabLength: 2
