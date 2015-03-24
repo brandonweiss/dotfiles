@@ -12,15 +12,17 @@
       '.DS_Store'
       'node_modules'
     ]
-    'disabledPackages': [
-      'emmet'
-      'language-php'
-      'language-java'
-      'language-c'
-      'language-objective-c'
-      'language-perl'
-      'welcome'
-      'atom-html-preview'
+    disabledPackages: [
+      "emmet"
+      "language-php"
+      "language-java"
+      "language-c"
+      "language-objective-c"
+      "language-perl"
+      "welcome"
+      "atom-html-preview"
+      "language-clojure"
+      "language-csharp"
     ]
     themes: [
       "one-dark-ui"
