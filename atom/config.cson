@@ -35,13 +35,14 @@
   'tree-view':
     'hideVcsIgnoredFiles': true
     'hideIgnoredNames': true
-  'editor':
-    'fontSize': 18
-    'showIndentGuide': true
-    'softWrapAtPreferredLineLength': true
-    'invisibles': {}
 '.python.source':
   'editor':
     'tabLength': 2
 '.diff.source':
   'editor': {}
+  editor:
+    showIndentGuide: true
+    autoIndentOnPaste: false
+    softWrapAtPreferredLineLength: true
+    invisibles: {}
+    fontSize: 18
