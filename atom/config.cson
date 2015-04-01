@@ -28,8 +28,6 @@
       "one-dark-ui"
       "one-dark-syntax"
     ]
-'.diff.source':
-  'editor': {}
   "test-status": {}
   runner:
     scopes:
