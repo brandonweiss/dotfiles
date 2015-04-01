@@ -17,6 +17,8 @@
       "atom-html-preview"
       "language-clojure"
       "language-csharp"
+      "language-make"
+      "language-less"
     ]
     themes: [
       "one-dark-ui"
