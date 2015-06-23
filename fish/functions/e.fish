@@ -1,3 +1,3 @@
 function e
-  atom
+  atom $argv
 end
