@@ -22,6 +22,7 @@
   # la = all commits, all reachable refs
   # l  = all commits, only current branch
   s   = status -sb
+  f   = fetch
   ra  = !git r --all
   r   = !GIT_NO_PAGER=1 git l -30
   la  = !git l --all
@@ -29,6 +30,7 @@
   d   = diff
   dc  = diff --cached
   co  = checkout
+  com = checkout master
   cob = checkout -b
   b   = branch
   c   = commit -m
@@ -36,6 +38,7 @@
   cp  = commit -am 'cp'
   w   = whatchanged
   sl  = shortlog -s -n
+  up  = "!git fetch && git rebase origin/master"
 [push]
   default = current
 
