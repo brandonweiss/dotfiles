@@ -40,6 +40,8 @@
     softWrapAtPreferredLineLength: true
     invisibles: {}
     fontSize: 18
+    fontFamily: "Inconsolata"
+    lineHeight: 1.3
 ".python.source":
   editor:
     tabLength: 2
