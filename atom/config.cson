@@ -18,10 +18,6 @@
       "language-csharp"
       "language-make"
       "language-less"
-    ]
-    themes: [
-      "one-dark-ui"
-      "one-dark-syntax"
       "test-status"
       "atom-html-preview"
     ]
