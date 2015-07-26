@@ -63,6 +63,8 @@
   clean = git hawser clean %f
   smudge = git hawser smudge %f
   required = true
+[remote "origin"]
+  # fetch = +refs/pull/*/head:refs/remotes/origin/pull/*
 [fetch]
   prune = true
 [filter "lfs"]
