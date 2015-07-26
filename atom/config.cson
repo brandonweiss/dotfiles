@@ -22,7 +22,7 @@
       "atom-html-preview"
     ]
     ignoredNames: [
-      "node_modules"
+      "public/ember-dev"
     ]
   "test-status": {}
   runner:
