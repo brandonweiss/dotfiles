@@ -29,8 +29,8 @@
     scopes:
       ruby: "/usr/local/bin/rbenv exec ruby"
   "tree-view":
-    hideVcsIgnoredFiles: true
     hideIgnoredNames: true
+    hideVcsIgnoredFiles: true
   editor:
     showIndentGuide: true
     autoIndentOnPaste: false
@@ -43,6 +43,7 @@
     preserveLastSearch: true
   tabs:
     enableVcsColoring: true
+  react: {}
 ".python.source":
   editor:
     tabLength: 2
