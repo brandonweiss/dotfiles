@@ -14,7 +14,6 @@
       "language-objective-c"
       "language-perl"
       "welcome"
-      "atom-html-preview"
       "language-clojure"
       "language-csharp"
       "language-make"
@@ -23,6 +22,8 @@
     themes: [
       "one-dark-ui"
       "one-dark-syntax"
+      "test-status"
+      "atom-html-preview"
     ]
     ignoredNames: [
       "node_modules"
