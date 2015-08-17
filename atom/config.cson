@@ -44,6 +44,10 @@
   tabs:
     enableVcsColoring: true
   react: {}
+  "autocomplete-plus": {}
+  "atom-beautify":
+    _analyticsUserId: "0ed61702-263b-4138-961b-6190a4b74f9f"
+  "find-and-replace": {}
 ".python.source":
   editor:
     tabLength: 2
