@@ -1,30 +1,76 @@
-function _git_branch_name
-  echo (git symbolic-ref HEAD ^/dev/null | sed -e 's|^refs/heads/||')
+function _pwd_with_tilde
+  echo $PWD | sed 's|^'$HOME'\(.*\)$|~\1|'
 end
 
-function _is_git_dirty
-  echo (git status -s --ignore-submodules=dirty ^/dev/null)
+function _in_git_directory
+  git rev-parse --git-dir > /dev/null 2>&1
 end
 
-function fish_prompt
-  set -l cyan (set_color -o cyan)
-  set -l yellow (set_color -o yellow)
-  set -l red (set_color -o red)
-  set -l blue (set_color -o blue)
-  set -l normal (set_color normal)
+function _git_branch_name_or_revision
+  set -l branch (git symbolic-ref HEAD ^ /dev/null | sed -e 's|^refs/heads/||')
+  set -l revision (git rev-parse HEAD ^ /dev/null | cut -b 1-7)
 
-  set -l arrow "$red➜  "
-  set -l cwd $cyan(basename (prompt_pwd))
+  if test (count $branch) -gt 0
+    echo $branch
+  else
+    echo $revision
+  end
+end
 
-  if [ (_git_branch_name) ]
-    set -l git_branch $red(_git_branch_name)
-    set git_info "$blue ($git_branch$blue)"
+function _git_upstream_configured
+  git rev-parse --abbrev-ref @"{u}" > /dev/null 2>&1
+end
 
-    if [ (_is_git_dirty) ]
-      set -l dirty "$yellow ✗"
-      set git_info "$git_info$dirty"
+function _git_behind_upstream
+  test (git rev-list --right-only --count HEAD...@"{u}" ^ /dev/null) -gt 0
+end
+
+function _git_ahead_of_upstream
+  test (git rev-list --left-only --count HEAD...@"{u}" ^ /dev/null) -gt 0
+end
+
+function _git_upstream_status
+  set -l arrows
+
+  if _git_upstream_configured
+    if _git_behind_upstream
+      set arrows "$arrows⇣"
+    end
+
+    if _git_ahead_of_upstream
+      set arrows "$arrows⇡"
     end
   end
 
-  echo -n -s $arrow $cwd $git_info $normal " "
+  echo $arrows
+end
+
+function _print_in_color
+  set -l string $argv[1]
+  set -l color  $argv[2]
+
+  set_color $color
+  printf $string
+  set_color normal
+end
+
+function _prompt_color_for_status
+  if test $argv[1] -eq 0
+    echo magenta
+  else
+    echo red
+  end
+end
+
+function fish_prompt
+  set -l last_status $status
+
+  _print_in_color "\n"(_pwd_with_tilde) blue
+
+  if _in_git_directory
+    _print_in_color " "(_git_branch_name_or_revision) 242
+    _print_in_color " "(_git_upstream_status) cyan
+  end
+
+  _print_in_color "\n❯ " (_prompt_color_for_status $last_status)
 end
