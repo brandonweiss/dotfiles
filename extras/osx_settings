@@ -16,6 +16,9 @@ defaults write com.apple.LaunchServices LSQuarantine -bool false
 # Save screenshots in PNG format (other options: BMP, GIF, JPG, PDF, TIFF)
 defaults write com.apple.screencapture type -string "png"
 
+# Remove window shadow from screenshots
+defaults write com.apple.screencapture disable-shadow -bool true
+
 # Enable full keyboard access for all controls (e.g. enable Tab in modal dialogs)
 # defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
 
