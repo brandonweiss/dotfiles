@@ -1,14 +1,35 @@
 [user]
   name = Brandon Weiss
   email = brandon@anti-pattern.com
+
+[github]
+  user  = brandonweiss
+
 [core]
   excludesfile = ~/.gitignore
   autocrlf     = input
   ignorecase   = false
   pager        = bash -lc "diff-highlight | diff-so-fancy | less -r"
+
 [diff]
   # For Github-style word diffs
   wordRegex = [^[:space:]]
+  tool = Kaleidoscope
+
+[difftool]
+  prompt = false
+
+[difftool "Kaleidoscope"]
+  cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+
+[merge]
+  tool = Kaleidoscope
+
+[mergetool]
+  prompt = false
+
+[mergetool "Kaleidoscope"]
+  cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" \"$REMOTE\"
 
 [color]
   ui          = auto
@@ -23,8 +44,18 @@
   newNormal     = "green bold"
   newHighlight  = "green bold 22"
 
-[github]
-  user  = brandonweiss
+[push]
+  default = current
+
+[fetch]
+  prune = true
+
+[rebase]
+  autosquash = true
+
+[remote "origin"]
+  # fetch = +refs/pull/*/head:refs/remotes/origin/pull/*
+
 [alias]
   # ra = recent commits, all reachable refs
   # r  = recent commits, only current branch
@@ -50,37 +81,18 @@
   up  = "!git fetch && git rebase origin/master"
   bc  = "!f() { git branch --merged ${1-master} | grep -v " ${1-master}$" | xargs git branch -d; }; f"
   bd  = "!f() { git checkout ${1-master} && git up && git bc ${1-master}; }; f"
-[push]
-  default = current
 
-[difftool "Kaleidoscope"]
-  cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
-[difftool]
-  prompt = false
-[diff]
-  tool = Kaleidoscope
-
-[mergetool "Kaleidoscope"]
-  cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" \"$REMOTE\"
-[mergetool]
-  prompt = false
-[merge]
-  tool = Kaleidoscope
 [filter "media"]
   required = true
   clean = git media clean %f
   smudge = git media smudge %f
+
 [filter "hawser"]
   clean = git hawser clean %f
   smudge = git hawser smudge %f
   required = true
-[remote "origin"]
-  # fetch = +refs/pull/*/head:refs/remotes/origin/pull/*
-[fetch]
-  prune = true
+
 [filter "lfs"]
   clean = git lfs clean %f
   smudge = git lfs smudge %f
   required = true
-[rebase]
-  autosquash = true
