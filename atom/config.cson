@@ -7,7 +7,6 @@
     showOnStartup: false
   core:
     disabledPackages: [
-      "emmet"
       "language-php"
       "language-java"
       "language-c"
@@ -20,6 +19,7 @@
       "language-less"
       "test-status"
       "atom-html-preview"
+      "emmet"
     ]
     ignoredNames: [
       "public/ember-dev"
