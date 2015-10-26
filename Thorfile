@@ -20,7 +20,8 @@ class Dotfiles < Thor
     link_file("#{Dir.pwd}/atom/keymap.cson", "~#{@user}/.atom/keymap.cson", options[:force])
     link_file("#{Dir.pwd}/atom/styles.less", "~#{@user}/.atom/styles.less", options[:force])
 
-    link_file("#{Dir.pwd}/bin/zipclean.sh", "/usr/local/bin/zipclean", options[:force])
+    link_file("#{Dir.pwd}/bin/diff-so-fancy.sh", "/usr/local/bin/diff-so-fancy", options[:force])
+    link_file("#{Dir.pwd}/bin/zipclean.sh",      "/usr/local/bin/zipclean", options[:force])
 
     link_file("#{Dir.pwd}/fish/config.fish", "~#{@user}/.config/fish/config.fish", options[:force])
     link_file("#{Dir.pwd}/fish/functions",   "~#{@user}/.config/fish/functions",   options[:force])

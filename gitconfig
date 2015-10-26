@@ -5,15 +5,24 @@
   excludesfile = ~/.gitignore
   autocrlf     = input
   ignorecase   = false
+  pager        = bash -lc "diff-highlight | diff-so-fancy | less -r"
 [diff]
   # For Github-style word diffs
   wordRegex = [^[:space:]]
+
 [color]
   ui          = auto
   diff        = auto
   interactive = auto
   status      = auto
   branch      = auto
+
+[color "diff-highlight"]
+  oldNormal     = "red bold"
+  oldHighlight  = "red bold 52"
+  newNormal     = "green bold"
+  newHighlight  = "green bold 22"
+
 [github]
   user  = brandonweiss
 [alias]
