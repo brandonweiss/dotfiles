@@ -27,3 +27,5 @@ defaults write com.apple.screencapture disable-shadow -bool true
 
 # Up Bluetooth A2DP audio quality
 defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" 40
+
+defaults write com.tapbots.TweetbotMac OpenURLsDirectly YES
