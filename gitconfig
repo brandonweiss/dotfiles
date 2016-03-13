@@ -76,6 +76,7 @@
   c   = commit -m
   ca  = commit -a -m
   cp  = commit -am 'cp'
+  amen = amend --no-edit
   w   = whatchanged
   sl  = shortlog -s -n
   up  = "!git fetch && git rebase origin/master"
