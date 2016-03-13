@@ -1,0 +1,76 @@
+#!/usr/bin/env ruby
+
+class Commit
+
+  attr_reader :sha
+
+  def initialize(sha:)
+    @sha = sha
+  end
+
+  def parent
+    sha = `git show #{@sha} --format='%p' --summary`.split("\n").first
+    self.class.new(sha: sha)
+  end
+
+end
+
+def git_blame(file, commit_sha)
+  `git blame #{commit_sha} #{file} --show-number`
+end
+
+def git_blame_line(file, commit_sha, line_number)
+  line = git_blame(file, commit_sha).split("\n")[line_number - 1]
+
+  match = line.match(/(\w+)\s+(\d{1,}) \([\w ]+\s+\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2} [\+-]\d{4}\s+\d+\)/)
+
+  if match
+    {
+      sha: match[1],
+      line_number: match[2].to_i
+    }
+  else
+    puts "That’s the end of the line."
+    exit
+  end
+end
+
+def open_commit_in_github(commit_sha)
+  match = `git remote -v`.match(/origin\s+git@github.com:(\w+)\/(\w+)\.git\s+\(fetch\)/)
+
+  github = {
+    organization: match[1],
+    repository: match[2]
+  }
+
+  `open https://github.com/#{github[:organization]}/#{github[:repository]}/commit/#{commit_sha}`
+end
+
+arguments = ARGV[0].split(":")
+file_path = arguments[0]
+line_number = arguments[1].to_i
+commit_sha = nil
+
+loop do
+  blame_result = git_blame_line(file_path, commit_sha, line_number)
+
+  commit = Commit.new(sha: blame_result[:sha])
+
+  system "git --no-pager show #{commit.sha}"
+
+  puts ""
+  puts "You can continue (enter), open in GitHub (o), or quit (q)."
+  print "❯ "
+
+  input = STDIN.gets.chomp
+
+  case input
+  when "" # enter
+    commit_sha  = commit.parent.sha
+    line_number = blame_result[:line_number]
+  when "o"
+    open_commit_in_github(commit.sha)
+  when "q"
+    exit
+  end
+end
