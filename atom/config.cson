@@ -21,7 +21,6 @@
     ignoredNames: [
       "public/ember-dev"
     ]
-    hideVcsIgnoredFiles: true
   editor:
     autoIndentOnPaste: false
     fontFamily: "Inconsolata"
