@@ -9,7 +9,7 @@
   excludesfile = ~/.gitignore
   autocrlf     = input
   ignorecase   = false
-  pager        = bash -lc "diff-highlight | diff-so-fancy | less -r"
+  pager        = "diff-so-fancy | less --tabs=4 -RFX"
 
 [diff]
   # For Github-style word diffs
