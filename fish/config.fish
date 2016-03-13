@@ -11,6 +11,8 @@ set PATH $DIFF_HIGHLIGHT            $PATH # diff-so-fancy
 set PATH "/usr/local/heroku/bin"    $PATH # Heroku Toolbelt
 set PATH "./bin"                    $PATH # Project-specific binstubs
 
+bass source ~/.nvm/nvm.sh ';' nvm > /dev/null
+
 set -x EDITOR     "atom --wait"
 set -x GIT_EDITOR "atom --wait"
 
