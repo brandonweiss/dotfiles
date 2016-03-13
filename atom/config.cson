@@ -35,6 +35,8 @@
   "find-and-replace": {}
   "fuzzy-finder":
     preserveLastSearch: true
+  "linter-jshint":
+    disableWhenNoJshintrcFileInPath: true
   metrics:
     userId: "78d13bac588a8fc8b6c7e7e5427cd45c06007882"
   minimap: {}
