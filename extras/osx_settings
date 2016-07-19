@@ -29,3 +29,6 @@ defaults write com.apple.screencapture disable-shadow -bool true
 defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" 40
 
 defaults write com.tapbots.TweetbotMac OpenURLsDirectly YES
+
+# Disable animations on Emoji picker opening
+defaults write NSGlobalDomain NSAutomaticWindowAnimationsEnabled -bool false
