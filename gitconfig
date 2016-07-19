@@ -15,6 +15,7 @@
   # For Github-style word diffs
   wordRegex = [^[:space:]]
   tool = Kaleidoscope
+  compaction-heuristic = true
 
 [difftool]
   prompt = false
