@@ -8,7 +8,6 @@ set DIFF_HIGHLIGHT "$GIT_CONTRIB/diff-highlight"
 set PATH "/usr/local/share/npm/bin" $PATH # npm
 set PATH "./node_modules/.bin"      $PATH # local npm
 set PATH $DIFF_HIGHLIGHT            $PATH # diff-so-fancy
-set PATH "/usr/local/heroku/bin"    $PATH # Heroku Toolbelt
 set PATH "./bin"                    $PATH # Project-specific binstubs
 
 bass source ~/.nvm/nvm.sh ';' nvm > /dev/null
