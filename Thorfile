@@ -28,6 +28,8 @@ class Dotfiles < Thor
     link_file("#{Dir.pwd}/fish/functions",   "~#{@user}/.config/fish/functions",   options[:force])
 
     %w[npm install -g diff-so-fancy]
+
+    `source "$HOME/.extras/osx_settings"`
   end
 
 end
