@@ -23,10 +23,10 @@
     ]
   editor:
     autoIndentOnPaste: false
-    fontFamily: "Inconsolata"
-    fontSize: 18
+    fontFamily: "SFMono-Regular"
+    fontSize: 15
     invisibles: {}
-    lineHeight: 1.3
+    lineHeight: 1.55
     showIndentGuide: true
     softWrapAtPreferredLineLength: true
   "exception-reporting":
