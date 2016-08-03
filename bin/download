@@ -1,0 +1,23 @@
+#!/usr/bin/env ruby
+
+require "pathname"
+
+url = ARGV[0]
+url = url.split("?").first
+filename = Pathname.new(url).basename
+
+if ARGV[1]
+  filename = "#{ARGV[1]}-#{filename}"
+end
+
+location = File.expand_path("~/Downloads/#{filename}")
+
+options = ""
+
+if File.exists?(location)
+  options << "--continue"
+end
+
+options = "#{options} --output-document=#{location}"
+
+system "wget #{options} #{url}"

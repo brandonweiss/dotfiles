@@ -21,8 +21,9 @@ class Dotfiles < Thor
     link_file("#{Dir.pwd}/atom/styles.less", "~#{@user}/.atom/styles.less", options[:force])
 
     # link_file("#{Dir.pwd}/bin/diff-so-fancy.sh", "/usr/local/bin/diff-so-fancy", options[:force])
-    link_file("#{Dir.pwd}/bin/psf",              "/usr/local/bin/psf", options[:force])
+    link_file("#{Dir.pwd}/bin/download",         "/usr/local/bin/download", options[:force])
     link_file("#{Dir.pwd}/bin/git-unwind",       "/usr/local/bin/git-unwind", options[:force])
+    link_file("#{Dir.pwd}/bin/psf",              "/usr/local/bin/psf", options[:force])
     link_file("#{Dir.pwd}/bin/zipclean.sh",      "/usr/local/bin/zipclean", options[:force])
 
     link_file("#{Dir.pwd}/fish/config.fish", "~#{@user}/.config/fish/config.fish", options[:force])
