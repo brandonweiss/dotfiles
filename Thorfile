@@ -3,7 +3,7 @@ class Dotfiles < Thor
   include Thor::Actions
   Thor::Sandbox::Dotfiles.source_root(File.expand_path("../", __FILE__))
 
-  EXCLUDED_FILES = %w{ atom bin extras fish Gemfile Gemfile.lock Thorfile vendor }
+  EXCLUDED_FILES = %w[atom bin extras fish Gemfile Gemfile.lock Thorfile vendor]
 
   @user = %x[whoami].chomp
 
