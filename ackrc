@@ -1,8 +1,0 @@
---smart-case
---literal
---ignore-dir=vendor/
---ignore-dir=public/assets/
---type-add=ruby=.haml,.scss,.sass,.rake
-
---type-set=log=.log
---nolog
