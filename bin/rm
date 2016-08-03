@@ -1,0 +1,15 @@
+#!/usr/bin/env ruby
+
+arguments = ARGV.map do |argument|
+  if argument == "-f"
+    nil
+  elsif argument.start_with?("-")
+    argument.gsub("f", "")
+  else
+    argument
+  end
+end
+
+arguments.unshift "-i"
+
+system "/bin/rm #{arguments.compact.join(" ")}"
