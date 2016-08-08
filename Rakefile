@@ -1,4 +1,4 @@
-EXCLUDED_FILES = %w[atom bin extras fish Rakefile vendor]
+EXCLUDED_FILES = %w[atom bin extras Rakefile vendor]
 
 task :install do
   home = ENV["HOME"]
@@ -12,9 +12,6 @@ task :install do
   ln_s "#{Dir.pwd}/atom/config.cson", "#{home}/.atom/config.cson", force: true
   ln_s "#{Dir.pwd}/atom/keymap.cson", "#{home}/.atom/keymap.cson", force: true
   ln_s "#{Dir.pwd}/atom/styles.less", "#{home}/.atom/styles.less", force: true
-
-  ln_s "#{Dir.pwd}/fish/config.fish", "#{home}/.config/fish/config.fish", force: true
-  ln_s "#{Dir.pwd}/fish/functions",   "#{home}/.config/fish/functions", force: true
 
   `npm install -g diff-so-fancy`
   `source "$HOME/.extras/osx_settings"`
