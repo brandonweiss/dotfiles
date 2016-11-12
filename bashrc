@@ -2,9 +2,11 @@ function rm() {
   rm-ruby $@
 }
 
+DOTFILES_DIRECTORY=$(dirname $(readlink ${BASH_SOURCE}))
+
 PATH="./node_modules/.bin:$PATH"
 PATH="./bin:$PATH"
-PATH="$HOME/Code/dotfiles/bin:$PATH"
+PATH="$DOTFILES_DIRECTORY/bin:$PATH"
 
 eval "$(rbenv init -)"
 
@@ -37,4 +39,4 @@ alias dots="atom ~/Code/dotfiles"
 alias reload=". ~/.bash_profile"
 
 # Private configurations
-. ./private/intercom.bash
+. $DOTFILES_DIRECTORY/private/intercom.bash
