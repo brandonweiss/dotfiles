@@ -1,4 +1,4 @@
-EXCLUDED_FILES = %w[atom bin extras Rakefile vendor]
+EXCLUDED_FILES = %w[atom bin extras private Rakefile vendor]
 
 task :install do
   home = ENV["HOME"]
