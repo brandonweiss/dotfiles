@@ -13,10 +13,10 @@ eval "$(rbenv init -)"
 NVM_DIR="$HOME/.nvm"
 . "$(brew --prefix nvm)/nvm.sh"
 
-EDITOR="atom --wait"
-GIT_EDITOR="atom --wait"
 . /usr/local/etc/bash_completion.d/git-completion.bash
 
+export EDITOR="atom --wait"
+export GIT_EDITOR="atom --wait"
 
 # NODE_PATH="/usr/local/lib/node_modules" $NODE_PATH
 # NODE_PATH="$HOME/node_modules/.bin"     $NODE_PATH
