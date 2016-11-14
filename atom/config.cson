@@ -50,6 +50,9 @@
     hideIgnoredNames: true
   welcome:
     showOnStartup: false
+".plain.text":
+  editor:
+    softWrap: true
 ".python.source":
   editor:
     tabLength: 2
