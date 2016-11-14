@@ -15,6 +15,8 @@ NVM_DIR="$HOME/.nvm"
 
 EDITOR="atom --wait"
 GIT_EDITOR="atom --wait"
+. /usr/local/etc/bash_completion.d/git-completion.bash
+
 
 # NODE_PATH="/usr/local/lib/node_modules" $NODE_PATH
 # NODE_PATH="$HOME/node_modules/.bin"     $NODE_PATH
