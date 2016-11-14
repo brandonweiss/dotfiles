@@ -21,6 +21,7 @@
     ignoredNames: [
       "public/ember-dev"
     ]
+    useCustomTitleBar: true
   editor:
     autoIndentOnPaste: false
     fontFamily: "SFMono-Regular"
