@@ -13,8 +13,11 @@ options = {
   exp_row_type: "metric"
 }
 
+app = ARGV.shift
+app = nil if app == "intercom"
+
 metrics = ARGV.flat_map do |metric|
-  if metric =~ /Controller#\w+/
+  string = if metric =~ /Controller#\w+/
     controller, actions = metric.split("#", 2)
 
     actions.split("#").map do |action|
@@ -22,6 +25,12 @@ metrics = ARGV.flat_map do |metric|
     end
   else
     "production.#{metric}"
+  end
+
+  if app
+    "#{app}.#{string}"
+  else
+    string
   end
 end
 
