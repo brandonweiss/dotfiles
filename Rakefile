@@ -14,6 +14,7 @@ task :install do
   ln_s "#{Dir.pwd}/atom/styles.less", "#{home}/.atom/styles.less", force: true
 
   `npm install -g diff-so-fancy`
+  `npm install -g fkill-cli`
   `source "$HOME/.extras/osx_settings"`
 end
 
