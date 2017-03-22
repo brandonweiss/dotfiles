@@ -40,6 +40,7 @@ alias rs="rails server"
 # Miscellaneous
 alias e="atom"
 alias dots="atom ~/Code/dotfiles"
+alias pr="hub pull-request"
 alias reload=". ~/.bash_profile"
 
 # Private configurations
