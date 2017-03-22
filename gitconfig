@@ -6,10 +6,11 @@
   user  = brandonweiss
 
 [core]
-  excludesfile = ~/.gitignore
-  autocrlf     = input
-  ignorecase   = false
-  pager        = "diff-so-fancy | less --tabs=4 -RFX"
+  excludesfile   = ~/.gitignore
+  autocrlf       = input
+  ignorecase     = false
+  pager          = "diff-so-fancy | less --tabs=4 -RFX"
+  untrackedCache = true
 
 [diff]
   # For Github-style word diffs
