@@ -4,14 +4,16 @@ function rm() {
 
 DOTFILES_DIRECTORY=$(dirname $(readlink ${BASH_SOURCE}))
 
+eval "$(rbenv init -)"
+
 PATH="./node_modules/.bin:$PATH"
 PATH="./bin:$PATH"
 PATH="$DOTFILES_DIRECTORY/bin:$PATH"
 
-eval "$(rbenv init -)"
-
 NVM_DIR="$HOME/.nvm"
 . "$(brew --prefix nvm)/nvm.sh"
+
+source $DOTFILES_DIRECTORY/bin/nvm_auto.sh
 
 . /usr/local/etc/bash_completion.d/git-completion.bash
 
