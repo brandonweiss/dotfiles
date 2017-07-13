@@ -1,0 +1,85 @@
+#!/usr/bin/env ruby
+
+def paths
+  code_path = "~/Code/."
+
+  command = <<~EOS
+    find #{code_path} \
+      -maxdepth 3 \
+      \\( \
+        -path "*_archive/*" \
+        -o \
+        -path "*.node_modules*" \
+        -o \
+        -path "*vendor/gems*" \
+        -o \
+        -path "*vendor/ruby*" \
+      \\) \
+      -prune \
+      -o \
+      -name ".ruby-version" \
+      -print
+  EOS
+
+  `#{command}`.split("\n")
+end
+
+def project_names_and_ruby_versions
+  @project_names_and_ruby_versions ||= begin
+    data = paths.map do |path|
+      project_name = path.sub("/Users/#{ENV['USER']}/Code/./", "").sub("/.ruby-version", "")
+      ruby_version = File.read(path).strip
+
+      {
+        project_name: project_name,
+        ruby_version: ruby_version,
+      }
+    end
+
+    data.unshift({
+      project_name: "global",
+      ruby_version: `rbenv global`.strip
+    })
+  end
+end
+
+def installed_ruby_versions
+  @installed_ruby_versions ||= begin
+    versions = `rbenv versions`.split("\n")
+    versions = versions[1..-1]
+    versions = versions.map(&:strip)
+    versions = versions.map do |version|
+      version.sub("* ", "").sub(" (set by RBENV_VERSION environment variable)", "")
+    end
+  end
+end
+
+def color(ruby_version:)
+  if installed_ruby_versions.include?(ruby_version)
+    green(value: ruby_version)
+  else
+    red(value: ruby_version)
+  end
+end
+
+def green(value:)
+  "\e[32m#{value}\e[0m"
+end
+
+def red(value:)
+  "\e[31m#{value}\e[0m"
+end
+
+longest_project_name = project_names_and_ruby_versions.map { |datum| datum[:project_name].length }.max
+
+project_names_and_ruby_versions.each do |datum|
+  printf "%-#{longest_project_name}s %s", datum[:project_name], color(ruby_version: datum[:ruby_version])
+  puts ""
+end
+
+ruby_versions = project_names_and_ruby_versions.map { |datum| datum[:ruby_version] }
+unused_ruby_versions = installed_ruby_versions - ruby_versions
+unused_output = unused_ruby_versions.any? ? unused_ruby_versions.map { |version| red(value: version) }.join(", ") : green(value: "None! 👌🏼")
+
+puts ""
+puts "Unused Ruby versions: #{unused_output}"
