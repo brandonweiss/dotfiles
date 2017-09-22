@@ -1,6 +1,7 @@
 EXCLUDED_FILES = %w[
   atom
   bin
+  Brewfile
   extras
   private
   scripts
@@ -22,6 +23,7 @@ task :install do
   ln_s "#{Dir.pwd}/atom/styles.less", "#{home}/.atom/styles.less", force: true
 
   `source "$HOME/.extras/osx_settings"`
+  `brew bundle`
   `scripts/install_ruby.sh`
   `scripts/install_gems.sh`
   `scripts/install_node.sh`
