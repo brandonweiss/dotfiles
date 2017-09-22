@@ -77,18 +77,18 @@ function _prompt_color_for_status() {
 function prompt() {
   local last_status=$?
 
-  printf "\n"
-  _print_in_color $(_pwd_with_tilde) $BLUE
+  # printf "\n"
+  # _print_in_color $(_pwd_with_tilde) $BLUE
+  #
+  # if _in_git_directory; then
+  #   printf " "
+  #   _print_in_color " $(_git_branch_name_or_revision)" $SPECIALGRAY
+  #   printf " "
+  #   _print_in_color " $(_git_upstream_status)" $CYAN
+  # fi
 
-  if _in_git_directory; then
-    printf " "
-    _print_in_color " $(_git_branch_name_or_revision)" $SPECIALGRAY
-    printf " "
-    _print_in_color " $(_git_upstream_status)" $CYAN
-  fi
-
   printf "\n"
-  _print_in_color "❯ " $(_prompt_color_for_status $last_status)
+  _print_in_color "❯" $(_prompt_color_for_status $last_status)
   printf " "
 }
 
