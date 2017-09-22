@@ -1,7 +1,10 @@
 "*":
   "atom-beautify":
     _analyticsUserId: "0ed61702-263b-4138-961b-6190a4b74f9f"
-  "autocomplete-plus": {}
+  "atom-package-deps":
+    ignored: []
+  "autocomplete-plus":
+    confirmCompletion: "tab always, enter when suggestion explicitly selected"
   core:
     disabledPackages: [
       "language-php"
@@ -17,17 +20,19 @@
       "test-status"
       "atom-html-preview"
       "emmet"
+      "atom-wallaby"
     ]
     ignoredNames: [
       "public/ember-dev"
     ]
-    useCustomTitleBar: true
+    titleBar: "custom-inset"
   editor:
     autoIndentOnPaste: false
     fontFamily: "SFMono-Regular"
     fontSize: 15
     invisibles: {}
     lineHeight: 1.55
+    preferredLineLength: 100
     showIndentGuide: true
     softWrapAtPreferredLineLength: true
   "exception-reporting":
@@ -37,6 +42,11 @@
     preserveLastSearch: true
   "linter-jshint":
     disableWhenNoJshintrcFileInPath: true
+  "linter-rubocop":
+    command: "/Users/brandon/.rbenv/versions/2.4.1/bin/rubocop"
+  "linter-ui-default":
+    panelHeight: 69
+    showPanel: true
   metrics:
     userId: "78d13bac588a8fc8b6c7e7e5427cd45c06007882"
   minimap: {}
@@ -44,6 +54,14 @@
   runner:
     scopes:
       ruby: "/usr/local/bin/rbenv exec ruby"
+  "split-diff":
+    diffWords: true
+    ignoreWhitespace: true
+    leftEditorColor: "red"
+    rightEditorColor: "green"
+    syncHorizontalScroll: true
+  "status-bar":
+    fullWidth: false
   tabs:
     enableVcsColoring: true
   "test-status": {}
