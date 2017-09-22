@@ -1,4 +1,12 @@
-EXCLUDED_FILES = %w[atom bin extras private Rakefile vendor]
+EXCLUDED_FILES = %w[
+  atom
+  bin
+  extras
+  private
+  scripts
+  Rakefile
+  vendor
+]
 
 task :install do
   home = ENV["HOME"]
@@ -13,9 +21,11 @@ task :install do
   ln_s "#{Dir.pwd}/atom/keymap.cson", "#{home}/.atom/keymap.cson", force: true
   ln_s "#{Dir.pwd}/atom/styles.less", "#{home}/.atom/styles.less", force: true
 
-  `npm install -g diff-so-fancy`
-  `npm install -g fkill-cli`
   `source "$HOME/.extras/osx_settings"`
+  `scripts/install_ruby.sh`
+  `scripts/install_gems.sh`
+  `scripts/install_node.sh`
+  `scripts/install_packages.sh`
 end
 
 task default: :install
