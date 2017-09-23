@@ -82,4 +82,5 @@ mas "Xcode", id: 497799835
 mas "xScope 4", id: 889428659
 
 tap "brandonweiss/homebrew-tap"
+brew "brandonweiss/tap/emojify", args: ["HEAD"]
 brew "brandonweiss/tap/git-aliae", args: ["HEAD"]
