@@ -2,11 +2,11 @@ require "pathname"
 
 task :install do
   Pathname.glob("atom/*").each do |file|
-    ln_s "#{Dir.pwd}/#{file}", "#{Dir.home}/.atom/#{file.basename}", force: true
+    symlink "#{Dir.pwd}/#{file}", "#{Dir.home}/.atom/#{file.basename}", force: true
   end
 
   Pathname.glob("home/*").each do |file|
-    ln_s "#{Dir.pwd}/#{file}", "#{Dir.home}/.#{file.basename}", force: true
+    symlink "#{Dir.pwd}/#{file}", "#{Dir.home}/.#{file.basename}", force: true
   end
 
   `brew bundle`
