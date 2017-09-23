@@ -22,12 +22,12 @@ task :install do
   ln_s "#{Dir.pwd}/atom/keymap.cson", "#{home}/.atom/keymap.cson", force: true
   ln_s "#{Dir.pwd}/atom/styles.less", "#{home}/.atom/styles.less", force: true
 
-  `source "$HOME/.extras/osx_settings"`
   `brew bundle`
   `scripts/install_ruby.sh`
   `scripts/install_gems.sh`
   `scripts/install_node.sh`
   `scripts/install_packages.sh`
+  `scripts/configure_macos.sh`
 end
 
 task default: :install
