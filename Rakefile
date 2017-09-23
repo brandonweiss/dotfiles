@@ -9,6 +9,7 @@ task :install do
     symlink "#{Dir.pwd}/#{file}", "#{Dir.home}/.#{file.basename}", force: true
   end
 
+  system("brew upgrade")
   system("brew bundle")
   system("scripts/install_ruby.sh")
   system("scripts/install_gems.sh")
