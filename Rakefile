@@ -9,12 +9,12 @@ task :install do
     symlink "#{Dir.pwd}/#{file}", "#{Dir.home}/.#{file.basename}", force: true
   end
 
-  `brew bundle`
-  `scripts/install_ruby.sh`
-  `scripts/install_gems.sh`
-  `scripts/install_node.sh`
-  `scripts/install_packages.sh`
-  `scripts/configure_macos.sh`
+  system("brew bundle")
+  system("scripts/install_ruby.sh")
+  system("scripts/install_gems.sh")
+  system("scripts/install_node.sh")
+  system("scripts/install_packages.sh")
+  system("scripts/configure_macos.sh")
 end
 
 task default: :install
