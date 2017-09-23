@@ -2,7 +2,7 @@ function rm() {
   rm-ruby $@
 }
 
-DOTFILES_DIRECTORY=$(dirname $(readlink ${BASH_SOURCE}))
+DOTFILES_DIRECTORY="$(dirname $(dirname $(readlink ${BASH_SOURCE})))"
 
 eval "$(rbenv init -)"
 
