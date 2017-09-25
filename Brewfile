@@ -40,7 +40,6 @@ cask "whiskey"
 mas "1Blocker", id: 1107421413
 mas "1Password", id: 443987910
 mas "Annotate", id: 918207447
-mas "Bear", id: 1091189122
 mas "Calca", id: 635758264
 mas "Claquette", id: 587748131
 mas "DaisyDisk", id: 411643860
