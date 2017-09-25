@@ -15,6 +15,7 @@ task :install do
   system("scripts/install_gems.sh")
   system("scripts/install_node.sh")
   system("scripts/install_packages.sh")
+  system("scripts/install_fonts.sh")
   system("scripts/configure_macos.sh")
 end
 
