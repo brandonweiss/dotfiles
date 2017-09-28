@@ -9,6 +9,7 @@ task :install do
     symlink "#{Dir.pwd}/#{file}", "#{Dir.home}/.#{file.basename}", force: true
   end
 
+  system("sudo xcodebuild -license accept")
   system("brew upgrade")
   system("brew bundle")
   system("scripts/install_ruby.sh")
