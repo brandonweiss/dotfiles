@@ -21,6 +21,9 @@
       "atom-html-preview"
       "emmet"
       "atom-wallaby"
+      "ember-cli-helper"
+      "git-time-machine"
+      "linter-rubocop"
     ]
     ignoredNames: [
       "public/ember-dev"
