@@ -24,7 +24,7 @@
       "ember-cli-helper"
       "git-time-machine"
       "linter-rubocop"
-      "linter"
+      "linter-eslint"
     ]
     ignoredNames: [
       "public/ember-dev"
