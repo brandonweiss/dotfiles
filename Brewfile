@@ -23,6 +23,7 @@ cask "kap"
 cask "keyboard-cleaner"
 cask "knox"
 cask "milanote"
+cask "osxfuse" # For Transmit
 cask "postman"
 cask "rocket"
 cask "sketch"
