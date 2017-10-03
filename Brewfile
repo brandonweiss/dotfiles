@@ -1,4 +1,5 @@
 brew "git"
+brew "heroku"
 brew "hub"
 brew "mas"
 brew "nvm"
