@@ -78,7 +78,6 @@ mas "Spectrum", id: 518156125
 mas "Squash", id: 1152443474
 mas "The Unarchiver", id: 425424353
 mas "Things 3", id: 904280696
-mas "Tweetbot", id: 557168941
 mas "WiFi Explorer", id: 494803304
 mas "Xcode", id: 497799835
 mas "xScope 4", id: 889428659
