@@ -59,16 +59,10 @@
   # fetch = +refs/pull/*/head:refs/remotes/origin/pull/*
 
 [alias]
-  # ra = recent commits, all reachable refs
-  # r  = recent commits, only current branch
-  # la = all commits, all reachable refs
-  # l  = all commits, only current branch
   s   = status -sb
   f   = fetch
-  ra  = !git r --all
-  r   = !GIT_NO_PAGER=1 git l -30
-  la  = !git l --all
-  l   = "!. ~/.githelpers && pretty_git_log"
+  lg  = "!f() { if [ -z $1 ]; then jungle 30; else jungle $1; fi; }; f"
+  lgp = "!jungle | less --quit-if-one-screen --no-init --raw-control-chars"
   d   = diff
   dc  = diff --cached
   co  = checkout

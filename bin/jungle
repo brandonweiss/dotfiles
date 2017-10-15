@@ -1,0 +1,105 @@
+#!/usr/bin/env node
+
+// git-jungle
+// git-vines
+
+try {
+  require("chalk")
+  require("columnify")
+  require("execa")
+} catch(error) {
+  let childProcess = require("child_process")
+  console.log("Dependencies missing, installing…")
+  childProcess.execSync("npm install chalk --no-save --loglevel='error'", { cwd: __dirname })
+  childProcess.execSync("npm install columnify --no-save --loglevel='error'", { cwd: __dirname })
+  childProcess.execSync("npm install execa --no-save --loglevel='error'", { cwd: __dirname })
+  console.log("Dependencies installed, run command again.")
+  process.exit(0)
+}
+
+const chalk = require("chalk")
+const columnify = require("columnify")
+const execa = require("execa")
+
+// Forces color when piping (like to `less`)
+chalk.enabled = true
+chalk.level = 3
+
+const transformShaAndGraph = (shaAndGraph) => {
+  let shaMatch = shaAndGraph.match(/(\w+)$/)
+  let sha = shaMatch && shaMatch[1]
+
+  return sha ? shaAndGraph.replace(sha, chalk.yellow(sha)) : shaAndGraph
+}
+
+const transformTime = (time) => {
+  if (!time) { return }
+
+  time = time.replace(" ago", "")
+
+  if (time.match(/,/)) {
+    time = time.split(",")[0]
+  }
+
+  return chalk.green(`(${time})`)
+}
+
+const transformRefs = (refs) => {
+  if (!refs) { return "" }
+
+  return chalk.red.bold(refs.trim())
+}
+
+const transformAuthor = (author) => {
+  if (!author) { return }
+
+  if (author.match(/ /)) {
+    author = author.split(" ")[0]
+  }
+
+  return chalk.blue.bold(`<${author}>`)
+}
+
+let shaPlaceholder = "%h"
+let relativeTimePlaceholder = "%ar"
+let refsPlaceholder = "%d"
+let subjectPlaceholder = "%s"
+let authorPlaceholder = "%an"
+
+let format = [
+  shaPlaceholder,
+  relativeTimePlaceholder,
+  refsPlaceholder,
+  subjectPlaceholder,
+  authorPlaceholder
+].join("|split|")
+
+let logCommand = `git log --graph --all --color --pretty="tformat:${format}"`
+let number = process.argv[2]
+if (number) {
+  logCommand = `${logCommand} -n ${number}`
+}
+
+let output = execa.shellSync(logCommand).stdout
+let lines = output.split("\n")
+
+let data = lines.map((line) => {
+  let lineData = line.split("|split|")
+  let shaAndGraph = transformShaAndGraph(lineData[0])
+  let relativeTime = transformTime(lineData[1])
+  let refs = transformRefs(lineData[2])
+  let subject = lineData[3]
+
+  let author = transformAuthor(lineData[4])
+  let refsSubjectAuthor = subject ? `${refs} ${subject} ${author}` : undefined
+
+  return [
+    shaAndGraph,
+    relativeTime,
+    refsSubjectAuthor,
+  ]
+})
+
+process.stdout.write(
+  columnify(data, { showHeaders: false })
+)
