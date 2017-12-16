@@ -1,3 +1,4 @@
+brew "fd"
 brew "git"
 brew "heroku"
 brew "hub"
