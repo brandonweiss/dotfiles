@@ -68,7 +68,6 @@ mas "Medis", id: 1063631769
 mas "Monodraw", id: 920404675
 mas "MOON", id: 1029982041
 mas "Movist", id: 461788075
-mas "Newton", id: 1059655371
 mas "Noizio", id: 928871589
 mas "Paste", id: 967805235
 mas "Pixelmator", id: 407963104
