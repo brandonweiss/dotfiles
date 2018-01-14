@@ -1,0 +1,11 @@
+#!/usr/bin/env ruby
+
+sha = ARGV[0]
+branch_name = `git branch --contains #{sha}`.chomp
+
+`git checkout master`
+`git fetch`
+`git pull --rebase`
+`git checkout -b #{branch_name}-extract`
+`git cherry-pick #{sha}`
+`git push`
