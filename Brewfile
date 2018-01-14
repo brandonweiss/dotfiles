@@ -12,6 +12,7 @@ brew "yarn"
 
 cask "alfred"
 cask "appzapper"
+cask "arq"
 cask "atom"
 cask "beamer"
 cask "cleanmymac"
