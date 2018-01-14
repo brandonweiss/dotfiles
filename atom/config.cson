@@ -1,17 +1,22 @@
 "*":
   "atom-beautify":
     _analyticsUserId: "0ed61702-263b-4138-961b-6190a4b74f9f"
+  "atom-ide-ui":
+    hyperclick:
+      darwinTriggerKeys: "altKey,metaKey"
   "atom-package-deps":
     ignored: []
+  "atom-runner": {}
   "autocomplete-plus":
     confirmCompletion: "tab always, enter when suggestion explicitly selected"
+  "bracket-matcher":
+    highlightMatchingLineNumber: true
   core:
     disabledPackages: [
       "language-php"
       "language-java"
       "language-c"
       "language-objective-c"
-      "language-perl"
       "welcome"
       "language-clojure"
       "language-csharp"
@@ -25,6 +30,7 @@
       "git-time-machine"
       "linter-rubocop"
       "linter-eslint"
+      "atom-runner"
     ]
     ignoredNames: [
       "public/ember-dev"
