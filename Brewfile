@@ -25,6 +25,7 @@ cask "insomnia"
 cask "kap"
 cask "keyboard-cleaner"
 cask "knox"
+cask "microblog"
 cask "milanote"
 cask "osxfuse" # For Transmit
 cask "postman"
