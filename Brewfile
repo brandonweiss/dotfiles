@@ -77,6 +77,7 @@ mas "Pixelmator", id: 407963104
 mas "Pixen", id: 525180431
 mas "Postico", id: 1031280567
 mas "Reeder 3", id: 880001334
+mas "Shotty", id: 1250306151
 mas "Sip", id: 507257563
 mas "Spectrum", id: 518156125
 mas "Squash", id: 1152443474
