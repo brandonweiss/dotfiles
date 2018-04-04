@@ -32,3 +32,6 @@ defaults write com.tapbots.TweetbotMac OpenURLsDirectly YES
 
 # Disable animations on Emoji picker opening
 defaults write NSGlobalDomain NSAutomaticWindowAnimationsEnabled -bool false
+
+# Set default screenshot location
+defaults write com.apple.screencapture location ~/Downloads/
