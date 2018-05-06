@@ -17,6 +17,7 @@
   wordRegex = [^[:space:]]
   tool = Kaleidoscope
   compaction-heuristic = true
+  colorMoved = default
 
 [difftool]
   prompt = false
@@ -35,7 +36,6 @@
 
 [color]
   ui          = auto
-  diff        = auto
   interactive = auto
   status      = auto
   branch      = auto
