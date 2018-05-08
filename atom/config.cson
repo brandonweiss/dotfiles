@@ -38,7 +38,7 @@
     titleBar: "custom-inset"
   editor:
     autoIndentOnPaste: false
-    fontFamily: "SFMono-Regular"
+    fontFamily: "SF Mono"
     fontSize: 15
     invisibles: {}
     preferredLineLength: 100
