@@ -41,7 +41,6 @@
     fontFamily: "SFMono-Regular"
     fontSize: 15
     invisibles: {}
-    lineHeight: 1.55
     preferredLineLength: 100
     showIndentGuide: true
     softWrapAtPreferredLineLength: true
