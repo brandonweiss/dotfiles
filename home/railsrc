@@ -1,0 +1,4 @@
+--database=postgresql
+--skip-coffee
+--skip-sprockets
+--webpack
