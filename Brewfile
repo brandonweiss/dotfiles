@@ -30,7 +30,6 @@ cask "microblog"
 cask "milanote"
 cask "osxfuse" # For Transmit
 cask "postman"
-cask "rocket"
 cask "sketch"
 cask "slack"
 cask "steam"
