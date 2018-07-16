@@ -39,7 +39,6 @@ cask "transmission"
 cask "transmit"
 cask "trym"
 cask "upterm"
-cask "vanilla"
 cask "vlc"
 cask "whiskey"
 
