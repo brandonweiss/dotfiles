@@ -72,7 +72,6 @@ mas "Monodraw", id: 920404675
 mas "MOON", id: 1029982041
 mas "Movist", id: 461788075
 mas "Noizio", id: 928871589
-mas "Paste", id: 967805235
 mas "Pixelmator", id: 407963104
 mas "Pixen", id: 525180431
 mas "Postico", id: 1031280567
