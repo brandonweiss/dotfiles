@@ -40,7 +40,6 @@ cask "transmit"
 cask "trym"
 cask "upterm"
 cask "vlc"
-cask "whiskey"
 
 mas "1Blocker", id: 1107421413
 mas "1Password", id: 443987910
