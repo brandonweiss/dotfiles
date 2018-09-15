@@ -42,7 +42,6 @@ cask "upterm"
 cask "vlc"
 
 mas "1Blocker", id: 1107421413
-mas "Annotate", id: 918207447
 mas "Calca", id: 635758264
 mas "Claquette", id: 587748131
 mas "DaisyDisk", id: 411643860
