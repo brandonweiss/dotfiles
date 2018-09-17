@@ -31,7 +31,6 @@ cask "microblog"
 cask "milanote"
 cask "osxfuse" # For Transmit
 cask "postman"
-cask "sketch"
 cask "slack"
 cask "steam"
 cask "sublime-text"
