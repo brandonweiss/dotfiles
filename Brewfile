@@ -10,6 +10,7 @@ brew "rbenv"
 brew "trash"
 brew "yarn"
 
+cask "airtable"
 cask "alfred"
 cask "appzapper"
 cask "arq"
