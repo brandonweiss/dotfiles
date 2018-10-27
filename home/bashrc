@@ -42,3 +42,5 @@ alias e="atom"
 alias dots="atom ~/Code/dotfiles"
 alias pr="hub pull-request"
 alias reload=". ~/.bash_profile"
+
+source $DOTFILES_DIRECTORY/extras/prompt.bash
