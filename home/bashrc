@@ -20,9 +20,6 @@ source $DOTFILES_DIRECTORY/bin/nvm_auto.sh
 export EDITOR="atom --wait"
 export GIT_EDITOR="atom --wait"
 
-# NODE_PATH="/usr/local/lib/node_modules" $NODE_PATH
-# NODE_PATH="$HOME/node_modules/.bin"     $NODE_PATH
-
 # General
 alias ls="ls -G"
 
