@@ -1,14 +1,16 @@
+brew "asdf"
 brew "fd"
 brew "git"
 brew "heroku"
 brew "hub"
 brew "mas"
-brew "nvm"
 brew "postgresql"
 brew "redis"
-brew "rbenv"
 brew "trash"
 brew "yarn"
+
+# Dependencies
+brew "gpg" # asdf nodejs plugin
 
 cask "airtable"
 cask "alfred"
