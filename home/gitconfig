@@ -1,98 +1,98 @@
 [user]
-  name = Brandon Weiss
-  email = brandon@anti-pattern.com
+	name = Brandon Weiss
+	email = brandon@anti-pattern.com
 
 [github]
-  user  = brandonweiss
+	user  = brandonweiss
 
 [core]
-  excludesfile   = ~/.gitignore
-  autocrlf       = input
-  ignorecase     = false
-  pager          = "diff-so-fancy | less --tabs=4 -RFX"
-  untrackedCache = true
+	excludesfile   = ~/.gitignore
+	autocrlf       = input
+	ignorecase     = false
+	pager          = "diff-so-fancy | less --tabs=4 -RFX"
+	untrackedCache = true
 
 [diff]
-  # For Github-style word diffs
-  wordRegex = [^[:space:]]
-  tool = Kaleidoscope
-  compaction-heuristic = true
-  colorMoved = default
+	# For Github-style word diffs
+	wordRegex = [^[:space:]]
+	tool = Kaleidoscope
+	compaction-heuristic = true
+	colorMoved = default
 
 [difftool]
-  prompt = false
+	prompt = false
 
 [difftool "Kaleidoscope"]
-  cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
 
 [merge]
-  tool = Kaleidoscope
+	tool = Kaleidoscope
 
 [mergetool]
-  prompt = false
+	prompt = false
 
 [mergetool "Kaleidoscope"]
-  cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" \"$REMOTE\"
+	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" \"$REMOTE\"
 
 [color]
-  ui          = auto
-  interactive = auto
-  status      = auto
-  branch      = auto
+	ui          = auto
+	interactive = auto
+	status      = auto
+	branch      = auto
 
 [color "diff-highlight"]
-  oldNormal     = "red bold"
-  oldHighlight  = "red bold 52"
-  newNormal     = "green bold"
-  newHighlight  = "green bold 22"
+	oldNormal     = "red bold"
+	oldHighlight  = "red bold 52"
+	newNormal     = "green bold"
+	newHighlight  = "green bold 22"
 
 [push]
-  default = current
+	default = current
 
 [fetch]
-  prune = true
+	prune = true
 
 [rebase]
-  autosquash = true
-  autoStash = true
+	autosquash = true
+	autoStash = true
 
 [remote "origin"]
-  # fetch = +refs/pull/*/head:refs/remotes/origin/pull/*
+	# fetch = +refs/pull/*/head:refs/remotes/origin/pull/*
 
 [alias]
-  s   = status -sb
-  f   = fetch
-  lg  = "!f() { if [ -z $1 ]; then jungle 30; else jungle $1; fi; }; f"
-  lgp = "!jungle | less --quit-if-one-screen --no-init --raw-control-chars"
-  d   = diff
-  dc  = diff --cached
-  co  = checkout
-  com = checkout master
-  cob = checkout -b
-  b   = branch
-  c   = commit -m
-  ca  = commit -a -m
-  cp  = commit -am 'cp'
-  amen = amend --no-edit
-  w   = whatchanged
-  sl  = shortlog -s -n
-  pf  = push --force-with-lease
-  up  = "!git fetch && git rebase origin/master"
-  bc  = "!f() { git branch --merged ${1-master} | grep -v " ${1-master}$" | xargs git branch -d; }; f"
-  bd  = "!f() { git checkout ${1-master} && git up && git bc ${1-master}; }; f"
+	s   = status -sb
+	f   = fetch
+	lg  = "!f() { if [ -z $1 ]; then jungle 30; else jungle $1; fi; }; f"
+	lgp = "!jungle | less --quit-if-one-screen --no-init --raw-control-chars"
+	d   = diff
+	dc  = diff --cached
+	co  = checkout
+	com = checkout master
+	cob = checkout -b
+	b   = branch
+	c   = commit -m
+	ca  = commit -a -m
+	cp  = commit -am 'cp'
+	amen = amend --no-edit
+	w   = whatchanged
+	sl  = shortlog -s -n
+	pf  = push --force-with-lease
+	up  = "!git fetch && git rebase origin/master"
+	bc  = "!f() { git branch --merged ${1-master} | grep -v " ${1-master}$" | xargs git branch -d; }; f"
+	bd  = "!f() { git checkout ${1-master} && git up && git bc ${1-master}; }; f"
 
 [filter "media"]
-  required = true
-  clean = git media clean %f
-  smudge = git media smudge %f
+	required = true
+	clean = git media clean %f
+	smudge = git media smudge %f
 
 [filter "hawser"]
-  clean = git hawser clean %f
-  smudge = git hawser smudge %f
-  required = true
+	clean = git hawser clean %f
+	smudge = git hawser smudge %f
+	required = true
 
 [filter "lfs"]
-  clean = git-lfs clean -- %f
-  smudge = git-lfs smudge -- %f
-  process = git-lfs filter-process
-  required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
