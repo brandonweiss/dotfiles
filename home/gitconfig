@@ -54,6 +54,7 @@
 
 [rebase]
   autosquash = true
+  autoStash = true
 
 [remote "origin"]
   # fetch = +refs/pull/*/head:refs/remotes/origin/pull/*
