@@ -34,6 +34,7 @@ cask "microblog"
 cask "milanote"
 cask "osxfuse" # For Transmit
 cask "postman"
+cask "sip"
 cask "slack"
 cask "steam"
 cask "sublime-text"
@@ -71,7 +72,6 @@ mas "Noizio", id: 928871589
 mas "Pixen", id: 525180431
 mas "Postico", id: 1031280567
 mas "Reeder 3", id: 880001334
-mas "Sip", id: 507257563
 mas "Spectrum", id: 518156125
 mas "Squash", id: 1152443474
 mas "Things 3", id: 904280696
