@@ -1,4 +1,5 @@
 brew "asdf"
+brew "autojump"
 brew "fd"
 brew "git"
 brew "heroku"
