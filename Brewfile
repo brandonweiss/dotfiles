@@ -37,6 +37,7 @@ cask "osxfuse" # For Transmit
 cask "postman"
 cask "sip"
 cask "slack"
+cask "spectrum"
 cask "steam"
 cask "sublime-text"
 cask "superhuman"
@@ -74,7 +75,7 @@ mas "PiPer", id: 1421915518
 mas "Pixen", id: 525180431
 mas "Postico", id: 1031280567
 mas "Reeder", id: 1449412482
-mas "Spectrum", id: 518156125
+mas "Spectrum Color", id: 518156125
 mas "Squash", id: 1152443474
 mas "Things 3", id: 904280696
 mas "WiFi Explorer", id: 494803304
