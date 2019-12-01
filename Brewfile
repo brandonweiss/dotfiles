@@ -57,7 +57,6 @@ mas "GIF Brewery", id: 1081413713
 mas "Gradient", id: 481981128
 mas "HazeOver", id: 430798174
 mas "HEIC Converter to JPEG or PNG", id: 1294126402
-mas "iA Writer", id: 775737590
 mas "Icon Slate", id: 439697913
 mas "Kaleidoscope", id: 587512244
 mas "Lungo", id: 1263070803
