@@ -8,7 +8,6 @@ brew "mas"
 brew "postgresql"
 brew "redis"
 brew "trash"
-brew "yarn"
 
 # Dependencies
 brew "gpg" # asdf nodejs plugin
