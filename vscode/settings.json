@@ -1,0 +1,14 @@
+{
+    "workbench.colorTheme": "One Dark",
+    "editor.fontFamily": "Operator Mono",
+    "editor.fontSize": 17,
+    "editor.rulers": [100],
+    "workbench.iconTheme": "city-lights-icons-vsc",
+    "editor.find.addExtraSpaceOnTop": false,
+    "editor.scrollBeyondLastLine": false,
+    "workbench.startupEditor": "newUntitledFile",
+    "editor.tabSize": 2,
+    "files.insertFinalNewline": true,
+    "files.trimTrailingWhitespace": true,
+    "search.useGlobalIgnoreFiles": true,
+}
