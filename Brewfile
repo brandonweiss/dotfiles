@@ -50,6 +50,7 @@ mas "Claquette", id: 587748131
 mas "DaisyDisk", id: 411643860
 mas "Deliveries", id: 924726344
 mas "Density", id: 980053405
+mas "Dynamo", id: 1445910651
 mas "Fantastical 2", id: 975937182
 mas "Gifski", id: 1351639930
 mas "Gradient", id: 481981128
