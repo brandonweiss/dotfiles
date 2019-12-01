@@ -66,9 +66,9 @@
 	lgp = "!jungle | less --quit-if-one-screen --no-init --raw-control-chars"
 	d   = diff
 	dc  = diff --cached
-	co  = checkout
-	com = checkout master
-	cob = checkout -b
+	sw  = switch
+	swm = switch master
+	swc = switch --create
 	b   = branch
 	c   = commit -m
 	ca  = commit -a -m
