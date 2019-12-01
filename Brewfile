@@ -52,7 +52,6 @@ mas "Deliveries", id: 924726344
 mas "Density", id: 980053405
 mas "Fantastical 2", id: 975937182
 mas "Gifski", id: 1351639930
-mas "GIF Brewery", id: 1081413713
 mas "Gradient", id: 481981128
 mas "HazeOver", id: 430798174
 mas "HEIC Converter to JPEG or PNG", id: 1294126402
