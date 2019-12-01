@@ -4,6 +4,7 @@
   "atom-ide-ui":
     hyperclick:
       darwinTriggerKeys: "altKey,metaKey"
+    use: {}
   "atom-package-deps":
     ignored: []
   "atom-runner": {}
@@ -21,25 +22,25 @@
       "language-clojure"
       "language-csharp"
       "language-make"
-      "language-less"
       "test-status"
       "atom-html-preview"
       "emmet"
-      "atom-wallaby"
       "ember-cli-helper"
       "git-time-machine"
-      "linter-rubocop"
-      "linter-eslint"
       "atom-runner"
-    ]
-    ignoredNames: [
-      "public/ember-dev"
+      "regex-railroad-diagram"
+      "atom-ide-ui"
+      "language-rust"
+      "rails-transporter"
+      "linter-stylelint"
+      "language-lua"
     ]
     titleBar: "custom-inset"
+    useTreeSitterParsers: true
   editor:
     autoIndentOnPaste: false
-    fontFamily: "SF Mono"
-    fontSize: 15
+    fontFamily: "Operator Mono"
+    fontSize: 17
     invisibles: {}
     preferredLineLength: 100
     showIndentGuide: true
@@ -49,6 +50,8 @@
   "find-and-replace": {}
   "fuzzy-finder":
     preserveLastSearch: true
+    scoringSystem: "fast"
+    useRipGrep: true
   "linter-jshint":
     disableWhenNoJshintrcFileInPath: true
   "linter-rubocop":
@@ -76,8 +79,12 @@
   "test-status": {}
   "tree-view":
     hideIgnoredNames: true
+    hideVcsIgnoredFiles: true
   welcome:
     showOnStartup: false
+".mdx.source":
+  editor:
+    softWrap: true
 ".plain.text":
   editor:
     softWrap: true
