@@ -35,3 +35,6 @@ defaults write NSGlobalDomain NSAutomaticWindowAnimationsEnabled -bool false
 
 # Set default screenshot location
 defaults write com.apple.screencapture location ~/Downloads/
+
+# Force Figma to use the sRGB color space so colors look correct
+defaults write com.figma.Desktop ColorCorrectRendering -bool true
