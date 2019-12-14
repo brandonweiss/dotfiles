@@ -34,7 +34,6 @@ alias rs="rails server"
 # Miscellaneous
 alias av="aversion ~/Code"
 alias e="atom"
-alias dots="atom ~/Code/dotfiles"
 alias pr="hub pull-request"
 alias reload=". ~/.bash_profile"
 
