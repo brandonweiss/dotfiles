@@ -12,8 +12,8 @@ source "$(brew --prefix asdf)/asdf.sh"
 
 . /usr/local/etc/bash_completion.d/git-completion.bash
 
-export EDITOR="atom --wait"
-export GIT_EDITOR="atom --wait"
+export EDITOR="code --wait"
+export GIT_EDITOR="code --wait"
 
 [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
 
@@ -33,7 +33,7 @@ alias rs="rails server"
 
 # Miscellaneous
 alias av="aversion ~/Code"
-alias e="atom"
+alias e="code"
 alias pr="hub pull-request"
 alias reload=". ~/.bash_profile"
 
