@@ -7,3 +7,27 @@
  * If you are unfamiliar with LESS, you can read more about it here:
  * http://www.lesscss.org
  */
+
+.syntax--source.syntax--js {
+  .syntax--keyword.syntax--operator {
+    &.syntax--in,
+    &.syntax--of,
+    &.syntax--instanceof,
+    &.syntax--typeof {
+      font-style: italic;
+    }
+  }
+
+  .syntax--variable:not(.syntax--other):not(.syntax--parameter) {
+    font-style: italic;
+  }
+  .syntax--entity.syntax--other.syntax--attribute-name {
+    font-style: italic;
+  }
+}
+
+.syntax--text.syntax--html {
+  .syntax--attribute-name {
+    font-style: italic;
+  }
+}
