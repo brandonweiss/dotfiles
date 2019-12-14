@@ -11,4 +11,5 @@
     "files.insertFinalNewline": true,
     "files.trimTrailingWhitespace": true,
     "search.useGlobalIgnoreFiles": true,
+    "problems.showCurrentInStatus": true,
 }
