@@ -8,6 +8,7 @@ brew "hub"
 brew "mas"
 brew "postgresql"
 brew "redis"
+brew "starship"
 brew "trash"
 
 # Dependencies

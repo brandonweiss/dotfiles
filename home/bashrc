@@ -37,4 +37,4 @@ alias e="code"
 alias pr="hub pull-request"
 alias reload=". ~/.bash_profile"
 
-source $DOTFILES_DIRECTORY/extras/prompt.bash
+eval "$(starship init bash)"

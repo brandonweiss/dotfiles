@@ -7,6 +7,11 @@ for filename in $current_directory/atom/*; do
   echo "ln -sf $filename AND ~/.atom/$(basename $filename)"
 done
 
+for filename in $current_directory/config/*; do
+  ln -sf $filename ~/.config/$(basename $filename)
+  echo "ln -sf $filename AND ~/.config/$(basename $filename)"
+done
+
 for filename in $current_directory/vscode/*; do
   ln -sf $filename ~/Library/Application\ Support/Code/User/$(basename $filename)
   echo "ln -sf $filename AND ~/Library/Application\\ Support/Code/User/$(basename $filename)"
