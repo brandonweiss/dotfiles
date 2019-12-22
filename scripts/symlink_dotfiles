@@ -3,13 +3,16 @@
 current_directory=$(cd "$(dirname $(dirname "${BASH_SOURCE[0]}"))" && pwd)
 
 for filename in $current_directory/atom/*; do
+  ln -sf $filename ~/.atom/$(basename $filename)
   echo "ln -sf $filename AND ~/.atom/$(basename $filename)"
 done
 
 for filename in $current_directory/vscode/*; do
+  ln -sf $filename ~/Library/Application\ Support/Code/User/$(basename $filename)
   echo "ln -sf $filename AND ~/Library/Application\\ Support/Code/User/$(basename $filename)"
 done
 
 for filename in $current_directory/home/*; do
+  ln -sf $filename ~/.$(basename $filename)
   echo "ln -sf $filename AND ~/.$(basename $filename)"
 done
