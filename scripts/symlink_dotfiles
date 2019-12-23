@@ -1,23 +1,42 @@
-#!/usr/bin/env bash
+#!/usr/bin/env ruby
 
-current_directory=$(cd "$(dirname $(dirname "${BASH_SOURCE[0]}"))" && pwd)
+require "fileutils"
 
-for filename in $current_directory/atom/*; do
-  ln -sf $filename ~/.atom/$(basename $filename)
-  echo "ln -sf $filename AND ~/.atom/$(basename $filename)"
-done
+dotfiles_directory = File.dirname(__dir__)
 
-for filename in $current_directory/config/*; do
-  ln -sf $filename ~/.config/$(basename $filename)
-  echo "ln -sf $filename AND ~/.config/$(basename $filename)"
-done
+def files_in(directory_name)
+  dotfiles_directory = File.dirname(__dir__)
+  Dir.glob("#{dotfiles_directory}/#{directory_name}/**/*").reverse
+end
 
-for filename in $current_directory/vscode/*; do
-  ln -sf $filename ~/Library/Application\ Support/Code/User/$(basename $filename)
-  echo "ln -sf $filename AND ~/Library/Application\\ Support/Code/User/$(basename $filename)"
-done
+def log(from, to)
+  puts "Symlink #{from.sub(Dir.home, '~')} to #{to}"
+end
 
-for filename in $current_directory/home/*; do
-  ln -sf $filename ~/.$(basename $filename)
-  echo "ln -sf $filename AND ~/.$(basename $filename)"
-done
+files_in("home").each do |to|
+  relative_to = to.sub("#{dotfiles_directory}/home/", "")
+  from = "#{Dir.home}/.#{relative_to}"
+
+  log(from, to)
+  FileUtils.symlink(to, from, force: true)
+end
+
+puts
+
+files_in("atom").each do |to|
+  relative_to = to.sub("#{dotfiles_directory}/atom/", "")
+  from = "#{Dir.home}/.atom/#{relative_to}"
+
+  log(from, to)
+  FileUtils.symlink(to, from, force: true)
+end
+
+puts
+
+files_in("vscode").each do |to|
+  relative_to = to.sub("#{dotfiles_directory}/vscode/", "")
+  from = "#{Dir.home}/Library/Application\ Support/Code/User/#{relative_to}"
+
+  log(from, to)
+  FileUtils.symlink(to, from, force: true)
+end
