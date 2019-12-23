@@ -1,12 +1,13 @@
 #!/usr/bin/env ruby
 
 require "fileutils"
+require "pathname"
 
 dotfiles_directory = File.dirname(__dir__)
 
 def files_in(directory_name)
   dotfiles_directory = File.dirname(__dir__)
-  Dir.glob("#{dotfiles_directory}/#{directory_name}/**/*").reverse
+  Pathname.glob("#{dotfiles_directory}/#{directory_name}/**/*").reverse.reject(&:directory?)
 end
 
 def log(from, to)
@@ -26,6 +27,16 @@ puts
 files_in("atom").each do |to|
   relative_to = to.sub("#{dotfiles_directory}/atom/", "")
   from = "#{Dir.home}/.atom/#{relative_to}"
+
+  log(from, to)
+  FileUtils.symlink(to, from, force: true)
+end
+
+puts
+
+files_in("config").each do |to|
+  relative_to = to.sub("#{dotfiles_directory}/config/", "")
+  from = "#{Dir.home}/.config/#{relative_to}"
 
   log(from, to)
   FileUtils.symlink(to, from, force: true)

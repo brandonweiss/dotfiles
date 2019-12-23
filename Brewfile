@@ -1,7 +1,7 @@
 brew "asdf"
 brew "autojump"
-brew "bash"
 brew "fd"
+brew "fish"
 brew "git"
 brew "heroku"
 brew "hub"
