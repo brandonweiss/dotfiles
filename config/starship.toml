@@ -49,4 +49,5 @@ symbol = "🌱 "
 style = "242"
 
 [git_status]
+stashed_count.enabled = true
 style = "cyan"
