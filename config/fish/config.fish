@@ -27,7 +27,6 @@ alias rs "rails server"
 # Miscellaneous
 alias av "aversion ~/Code"
 alias e "code"
-alias pr "hub pull-request"
 
 starship init fish | source
 
