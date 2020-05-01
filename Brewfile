@@ -53,7 +53,6 @@ mas "Gifski", id: 1351639930
 mas "Gradient", id: 481981128
 mas "HazeOver", id: 430798174
 mas "HEIC Converter to JPEG or PNG", id: 1294126402
-mas "Honey", id: 1472777122
 mas "Kaleidoscope", id: 587512244
 mas "Lungo", id: 1263070803
 mas "Mactracker", id: 430255202
