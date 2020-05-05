@@ -13,6 +13,10 @@ source (brew --prefix autojump)"/share/autojump/autojump.fish"
 set --export EDITOR "code --wait"
 set --export GIT_EDITOR "code --wait"
 
+# Navigation
+alias ls "br"
+alias lso "command ls"
+
 # Bundler
 alias bc "bundle check"
 alias be "bundle exec"
