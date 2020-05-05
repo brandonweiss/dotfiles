@@ -1,9 +1,6 @@
 # Unhide the Library folder
 chflags nohidden ~/Library
 
-# Disable Chrome's print preview
-defaults write com.google.Chrome DisablePrintPreview -boolean true
-
 # Expand save panel by default
 defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
 
@@ -27,8 +24,6 @@ defaults write com.apple.screencapture disable-shadow -bool true
 
 # Up Bluetooth A2DP audio quality
 defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" 40
-
-defaults write com.tapbots.TweetbotMac OpenURLsDirectly YES
 
 # Disable animations on Emoji picker opening
 defaults write NSGlobalDomain NSAutomaticWindowAnimationsEnabled -bool false
