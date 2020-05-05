@@ -76,5 +76,4 @@ tap "homebrew/cask-versions"
 cask "firefoxdeveloperedition"
 
 tap "brandonweiss/homebrew-tap"
-brew "brandonweiss/tap/emojify", args: ["HEAD"]
 brew "brandonweiss/tap/git-aliae", args: ["HEAD"]
