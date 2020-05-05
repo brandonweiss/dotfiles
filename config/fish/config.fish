@@ -30,6 +30,7 @@ alias rs "rails server"
 
 # Miscellaneous
 alias av "aversion ~/Code"
+alias bruo "brew update; echo ""; brew outdated"
 alias e "code"
 
 starship init fish | source
