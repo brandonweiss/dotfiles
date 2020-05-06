@@ -12,4 +12,11 @@
   "files.trimTrailingWhitespace": true,
   "search.useGlobalIgnoreFiles": true,
   "problems.showCurrentInStatus": true,
+  "search.exclude": {
+    "package-lock.json": true
+  },
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+  "editor.formatOnType": true,
+  "terminal.integrated.shell.osx": "/usr/local/bin/fish",
 }
