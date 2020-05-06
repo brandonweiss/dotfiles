@@ -19,4 +19,22 @@
   "editor.formatOnPaste": true,
   "editor.formatOnType": true,
   "terminal.integrated.shell.osx": "/usr/local/bin/fish",
+  "workbench.colorCustomizations": {
+    "terminal.ansiBlack": "#646464",
+    "terminal.ansiBrightBlack": "#646464",
+    "terminal.ansiRed": "#F78D8C",
+    "terminal.ansiBrightRed": "#F78D8C",
+    "terminal.ansiGreen": "#A8D4A9",
+    "terminal.ansiBrightGreen": "#A8D4A9",
+    "terminal.ansiYellow": "#FFD479",
+    "terminal.ansiBrightYellow": "#FFD479",
+    "terminal.ansiBlue": "#69ACDA",
+    "terminal.ansiBrightBlue": "#69ACDA",
+    "terminal.ansiMagenta": "#D7ACD6",
+    "terminal.ansiBrightMagenta": "#D7ACD6",
+    "terminal.ansiCyan": "#76D4D6",
+    "terminal.ansiBrightCyan": "#76D4D6",
+    "terminal.ansiWhite": "#D6D6D6",
+    "terminal.ansiBrightWhite": "#D6D6D6"
+  }
 }
