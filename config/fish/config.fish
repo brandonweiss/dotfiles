@@ -1,13 +1,13 @@
 set fish_greeting # Disable Fish greeting
 
+source (brew --prefix asdf)"/asdf.fish"
+source (brew --prefix autojump)"/share/autojump/autojump.fish"
+
 set dotfiles_directory (dirname (dirname (dirname (readlink (status --filename)))))
 
 set PATH ./node_modules/.bin $PATH
 set PATH ./bin $PATH
 set PATH $dotfiles_directory/bin $PATH
-
-source (brew --prefix asdf)"/asdf.fish"
-source (brew --prefix autojump)"/share/autojump/autojump.fish"
 
 # Variables
 set --export EDITOR "code --wait"
