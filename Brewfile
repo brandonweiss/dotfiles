@@ -61,7 +61,6 @@ mas "StopTheMadness", id: 1376402589
 mas "Things 3", id: 904280696
 mas "Ulysses", id: 1225570693
 mas "Xcode", id: 497799835
-mas "xScope 4", id: 889428659
 
 tap "homebrew/cask-versions"
 cask "firefoxdeveloperedition"
