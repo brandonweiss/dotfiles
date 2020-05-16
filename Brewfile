@@ -49,7 +49,6 @@ mas "Deliveries", id: 924726344
 mas "Fantastical 2", id: 975937182
 mas "Gifski", id: 1351639930
 mas "HazeOver", id: 430798174
-mas "HEIC Converter to JPEG or PNG", id: 1294126402
 mas "Kaleidoscope", id: 587512244
 mas "Lungo", id: 1263070803
 mas "Mactracker", id: 430255202
