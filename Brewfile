@@ -61,7 +61,6 @@ mas "Pixen", id: 525180431
 mas "Postico", id: 1031280567
 mas "Reeder", id: 1449412482
 mas "Spectrum Color", id: 518156125
-mas "Squash", id: 1152443474
 mas "Step Two", id: 1448916662
 mas "StopTheMadness", id: 1376402589
 mas "Things 3", id: 904280696
