@@ -38,7 +38,6 @@ cask "slack"
 cask "superhuman"
 cask "transmission"
 cask "transmit"
-cask "trym"
 cask "visual-studio-code"
 
 mas "1Blocker", id: 1107421413
