@@ -47,7 +47,6 @@ mas "Fantastical 2", id: 975937182
 mas "Gifski", id: 1351639930
 mas "HazeOver", id: 430798174
 mas "Kaleidoscope", id: 587512244
-mas "Lungo", id: 1263070803
 mas "Mactracker", id: 430255202
 mas "Magnet", id: 441258766
 mas "Monodraw", id: 920404675
