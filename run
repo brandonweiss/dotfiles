@@ -5,7 +5,6 @@ sudo xcodebuild -license accept
 brew upgrade
 brew bundle
 scripts/install_ruby.sh
-scripts/install_gems.sh
 scripts/install_node.sh
 scripts/install_packages.sh
 scripts/install_fonts.sh
