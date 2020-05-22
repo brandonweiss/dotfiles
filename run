@@ -7,5 +7,4 @@ brew bundle
 scripts/install_ruby.sh
 scripts/install_node.sh
 scripts/install_packages.sh
-scripts/install_fonts.sh
 scripts/configure_macos.sh
