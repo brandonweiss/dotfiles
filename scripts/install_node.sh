@@ -1,1 +1,3 @@
-asdf install nodejs 11.2.0
+asdf plugin add nodejs
+bash ~/.asdf/plugins/nodejs/bin/import-release-team-keyring
+asdf install nodejs 14.3.0
