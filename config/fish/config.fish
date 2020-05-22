@@ -13,18 +13,6 @@ set PATH $dotfiles_directory/bin $PATH
 set --export EDITOR "code --wait"
 set --export GIT_EDITOR "code --wait"
 
-# Bundler
-alias bc "bundle check"
-alias be "bundle exec"
-alias bi "bundle install"
-alias bo "bundle outdated"
-alias bu "bundle update"
-
-# Rails
-alias rc "rails console"
-alias rs "rails server"
-
-# Miscellaneous
 alias av "aversion ~/Code"
 alias bruo "brew update; echo ""; brew outdated"
 alias e "code"
