@@ -24,14 +24,6 @@ end
 
 puts
 
-files_in("atom").each do |to|
-  relative_to = to.sub("#{dotfiles_directory}/atom/", "")
-  from = "#{Dir.home}/.atom/#{relative_to}"
-
-  log(from, to)
-  FileUtils.symlink(to, from, force: true)
-end
-
 puts
 
 files_in("config").each do |to|
