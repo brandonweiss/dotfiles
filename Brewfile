@@ -61,7 +61,7 @@ mas "Ulysses", id: 1225570693
 mas "Xcode", id: 497799835
 
 tap "homebrew/cask-versions"
-cask "firefoxdeveloperedition"
+cask "firefox-developer-edition"
 
 tap "brandonweiss/homebrew-tap"
 brew "brandonweiss/tap/git-aliae", args: ["HEAD"]
