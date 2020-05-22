@@ -1,6 +1,5 @@
 brew "asdf"
 brew "autojump"
-brew "broot"
 brew "fd"
 brew "fish"
 brew "git"
