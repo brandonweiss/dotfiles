@@ -1,0 +1,39 @@
+#!/usr/bin/env ruby
+
+require "json"
+
+node_modules = File.expand_path("./node_modules")
+package_paths = Dir.glob("#{node_modules}/*/package.json")
+
+puts "Found #{package_paths.count} dependencies"
+
+packages_by_type = package_paths.each_with_object({
+  module: [],
+  browser: [],
+  "umd:main": [],
+  main: [],
+  none: [],
+}) do |path, collection|
+  package = JSON.parse(File.read(path), symbolize_names: true)
+  package_name = package[:name]
+  # package_version = package[:version]
+
+  if package.key?(:module)
+    collection[:module] << package_name
+  elsif package.key?(:browser)
+    collection[:browser] << package_name
+  elsif package.key?(:"umd:main")
+    collection[:"umd:main"] << package_name
+  elsif package.key?(:main)
+    collection[:main] << package_name
+  else
+    collection[:none] << package_name
+    # puts "#{package_name}@#{package_version} has no field"
+  end
+end
+
+puts "#{packages_by_type[:module].count} use module"
+puts "#{packages_by_type[:browser].count} use browser"
+puts "#{packages_by_type[:"umd:main"].count} use umd:main"
+puts "#{packages_by_type[:main].count} use main"
+puts "#{packages_by_type[:none].count} use none"
