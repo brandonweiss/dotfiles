@@ -1,24 +1,21 @@
 {
-  "workbench.colorTheme": "One Dark",
   "editor.fontFamily": "Operator Mono",
   "editor.fontSize": 17,
-  "editor.rulers": [100],
-  "workbench.iconTheme": "city-lights-icons-vsc",
-  "editor.find.addExtraSpaceOnTop": false,
-  "editor.scrollBeyondLastLine": false,
-  "workbench.startupEditor": "newUntitledFile",
-  "editor.tabSize": 2,
-  "files.insertFinalNewline": true,
-  "files.trimTrailingWhitespace": true,
-  "search.useGlobalIgnoreFiles": true,
-  "problems.showCurrentInStatus": true,
-  "search.exclude": {
-    "package-lock.json": true
-  },
   "editor.formatOnSave": true,
   "editor.formatOnPaste": true,
   "editor.formatOnType": true,
+  "editor.rulers": [100],
+  "editor.find.addExtraSpaceOnTop": false,
+  "editor.scrollBeyondLastLine": false,
+  "editor.tabSize": 2,
+  "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true,
+  "problems.showCurrentInStatus": true,
   "terminal.integrated.shell.osx": "/usr/local/bin/fish",
+  "search.exclude": {
+    "package-lock.json": true
+  },
+  "search.useGlobalIgnoreFiles": true,
   "workbench.colorCustomizations": {
     "terminal.ansiBlack": "#646464",
     "terminal.ansiBrightBlack": "#646464",
@@ -36,5 +33,8 @@
     "terminal.ansiBrightCyan": "#76D4D6",
     "terminal.ansiWhite": "#D6D6D6",
     "terminal.ansiBrightWhite": "#D6D6D6"
-  }
+  },
+  "workbench.colorTheme": "One Dark",
+  "workbench.iconTheme": "city-lights-icons-vsc",
+  "workbench.startupEditor": "newUntitledFile"
 }
