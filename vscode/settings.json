@@ -8,6 +8,10 @@
   "editor.find.addExtraSpaceOnTop": false,
   "editor.scrollBeyondLastLine": false,
   "editor.tabSize": 2,
+  "[markdown]": {
+    "editor.wordWrap": "wordWrapColumn",
+    "editor.wordWrapColumn": 100
+  },
   "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,
   "problems.showCurrentInStatus": true,
