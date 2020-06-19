@@ -75,7 +75,8 @@
 	d   = diff
 	dc  = diff --cached
 	sw  = switch
-	swm = switch master
+	swd = "!git switch $(default_branch)"
+	swm = "!git switch $(default_branch)"
 	swc = switch --create
 	b   = branch
 	c   = commit -m
@@ -85,9 +86,9 @@
 	w   = whatchanged
 	sl  = shortlog -s -n
 	pf  = push --force-with-lease
-	up  = "!git fetch && git rebase origin/master"
-	bc  = "!f() { git branch --merged ${1-master} | grep -v " ${1-master}$" | xargs git branch -d; }; f"
-	bd  = "!f() { git checkout ${1-master} && git up && git bc ${1-master}; }; f"
+	up  = "!git fetch && git rebase origin/$(default_branch)"
+	bc  = "!f() { git branch --merged ${1-$(default_branch)} | grep -v " ${1-$(default_branch)}$" | xargs git branch -d; }; f"
+	bd  = "!f() { git checkout ${1-$(default_branch)} && git up && git bc ${1-$(default_branch)}; }; f"
 
 [filter "media"]
 	required = true

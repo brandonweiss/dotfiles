@@ -3,7 +3,7 @@
 sha = ARGV[0]
 branch_name = `git branch --contains #{sha}`.chomp
 
-`git checkout master`
+`git checkout ${default_branch}`
 `git fetch`
 `git pull --rebase`
 `git checkout -b #{branch_name}-extract`
