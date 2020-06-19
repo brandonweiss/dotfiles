@@ -1,5 +1,6 @@
 brew "asdf"
 brew "autojump"
+brew "diff-so-fancy"
 brew "fish"
 brew "git"
 brew "mas"
