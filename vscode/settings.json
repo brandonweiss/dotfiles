@@ -12,6 +12,10 @@
     "editor.wordWrap": "wordWrapColumn",
     "editor.wordWrapColumn": 100
   },
+  "[mdx]": {
+    "editor.wordWrap": "wordWrapColumn",
+    "editor.wordWrapColumn": 100
+  },
   "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,
   "problems.showCurrentInStatus": true,
