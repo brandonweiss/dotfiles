@@ -47,7 +47,7 @@ mas "Monodraw", id: 920404675
 mas "Movist", id: 461788075
 mas "Pixen", id: 525180431
 mas "Postico", id: 1031280567
-mas "Reeder", id: 1449412482
+mas "Reeder", id: 1529448980
 mas "Spectrum Color", id: 518156125
 mas "Step Two", id: 1448916662
 mas "StopTheMadness", id: 1376402589
