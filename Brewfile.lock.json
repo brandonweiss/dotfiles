@@ -162,12 +162,6 @@
           "full_name": "postman"
         }
       },
-      "sip": {
-        "version": "2.3",
-        "options": {
-          "full_name": "sip"
-        }
-      },
       "slack": {
         "version": "4.6.0",
         "options": {
