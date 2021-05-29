@@ -246,12 +246,6 @@
           "full_name": "gitup"
         }
       },
-      "google-chrome": {
-        "version": "83.0.4103.61",
-        "options": {
-          "full_name": "google-chrome"
-        }
-      },
       "insomnia": {
         "version": "7.1.1",
         "options": {
