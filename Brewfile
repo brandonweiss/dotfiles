@@ -33,7 +33,6 @@ cask "transmit"
 cask "visual-studio-code"
 
 mas "1Blocker", id: 1107421413
-mas "Calca", id: 635758264
 mas "DaisyDisk", id: 411643860
 mas "Deliveries", id: 924726344
 mas "Fantastical 2", id: 975937182
