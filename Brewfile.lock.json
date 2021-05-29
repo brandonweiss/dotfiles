@@ -252,12 +252,6 @@
           "full_name": "google-chrome"
         }
       },
-      "hyper": {
-        "version": "1.4.8",
-        "options": {
-          "full_name": "hyper"
-        }
-      },
       "insomnia": {
         "version": "7.1.1",
         "options": {
