@@ -1,0 +1,21 @@
+#!/usr/bin/env zsh
+
+# General
+alias ls="ls -G"
+
+# Bundler
+alias bc="bundle check"
+alias be="bundle exec"
+alias bi="bundle install"
+alias bo="bundle outdated"
+alias bu="bundle update"
+
+# Rails
+alias rc="rails console"
+alias rs="rails server"
+
+# Miscellaneous
+# alias av="aversion ~/Code"
+# alias e="code"
+# alias pr="hub pull-request"
+# alias reload=". ~/.bash_profile"
