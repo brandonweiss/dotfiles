@@ -1,105 +1,79 @@
-#!/usr/bin/env node
+#!/usr/bin/env ruby
 
-// git-jungle
-// git-vines
+# git-jungle
+# git-vines
 
-try {
-  require("chalk")
-  require("columnify")
-  require("execa")
-} catch(error) {
-  let childProcess = require("child_process")
-  console.log("Dependencies missing, installing…")
-  childProcess.execSync("npm install chalk --no-save --loglevel='error'", { cwd: __dirname })
-  childProcess.execSync("npm install columnify --no-save --loglevel='error'", { cwd: __dirname })
-  childProcess.execSync("npm install execa --no-save --loglevel='error'", { cwd: __dirname })
-  console.log("Dependencies installed, run command again.")
-  process.exit(0)
-}
+require "colorize"
+require "terminal-table"
 
-const chalk = require("chalk")
-const columnify = require("columnify")
-const execa = require("execa")
+def transformShaAndGraph(shaAndGraph)
+  shaMatch = shaAndGraph.match(/(\w+)$/)
+  sha = shaMatch && shaMatch[1]
 
-// Forces color when piping (like to `less`)
-chalk.enabled = true
-chalk.level = 3
+  sha ? shaAndGraph.sub(sha, sha.colorize(:yellow)) : shaAndGraph
+end
 
-const transformShaAndGraph = (shaAndGraph) => {
-  let shaMatch = shaAndGraph.match(/(\w+)$/)
-  let sha = shaMatch && shaMatch[1]
+def transformTime(time)
+  return unless time
 
-  return sha ? shaAndGraph.replace(sha, chalk.yellow(sha)) : shaAndGraph
-}
+  time = time.sub(" ago", "")
 
-const transformTime = (time) => {
-  if (!time) { return }
-
-  time = time.replace(" ago", "")
-
-  if (time.match(/,/)) {
+  if time.match(/,/)
     time = time.split(",")[0]
-  }
+  end
 
-  return chalk.green(`(${time})`)
-}
+  "(#{time})"
+end
 
-const transformRefs = (refs) => {
-  if (!refs) { return "" }
+def transformRefs(refs)
+  return "" unless refs
 
-  return chalk.red.bold(refs.trim())
-}
+  refs.strip.colorize(color: :red, mode: :bold)
+end
 
-const transformAuthor = (author) => {
-  if (!author) { return }
+def transformAuthor(author)
+  return unless author
 
-  if (author.match(/ /)) {
+  if author.match(/ /)
     author = author.split(" ")[0]
-  }
+  end
 
-  return chalk.blue.bold(`<${author}>`)
-}
+  "<#{author}>".colorize(color: :blue, mode: :bold)
+end
 
-let shaPlaceholder = "%h"
-let relativeTimePlaceholder = "%ar"
-let refsPlaceholder = "%d"
-let subjectPlaceholder = "%s"
-let authorPlaceholder = "%an"
+shaPlaceholder = "%h"
+relativeTimePlaceholder = "%ar"
+refsPlaceholder = "%d"
+subjectPlaceholder = "%s"
+authorPlaceholder = "%an"
 
-let format = [
+format = [
   shaPlaceholder,
   relativeTimePlaceholder,
   refsPlaceholder,
   subjectPlaceholder,
-  authorPlaceholder
+  authorPlaceholder,
 ].join("|split|")
 
-let logCommand = `git log --graph --all --color --pretty="tformat:${format}"`
-let number = process.argv[2]
-if (number) {
-  logCommand = `${logCommand} -n ${number}`
-}
+logCommand = "git log --graph --all --color --pretty=\"tformat:#{format}\""
+number = ARGV[1]
 
-let output = execa.shellSync(logCommand).stdout
-let lines = output.split("\n")
+logCommand = "#{logCommand} -n #{number}" if number
 
-let data = lines.map((line) => {
-  let lineData = line.split("|split|")
-  let shaAndGraph = transformShaAndGraph(lineData[0])
-  let relativeTime = transformTime(lineData[1])
-  let refs = transformRefs(lineData[2])
-  let subject = lineData[3]
+lines = `#{logCommand}`.split("\n")
 
-  let author = transformAuthor(lineData[4])
-  let refsSubjectAuthor = subject ? `${refs} ${subject} ${author}` : undefined
+data = lines.map do |line|
+  shaAndGraph, relativeTime, refs, subject, author = line.split("|split|")
+  author = transformAuthor(author)
 
-  return [
-    shaAndGraph,
-    relativeTime,
-    refsSubjectAuthor,
-  ]
-})
+  refsSubjectAuthor = subject ? "#{transformRefs(refs)} #{subject} #{transformAuthor(author)}" : nil
 
-process.stdout.write(
-  columnify(data, { showHeaders: false })
+  [transformShaAndGraph(shaAndGraph), transformTime(relativeTime), refsSubjectAuthor]
+end
+
+puts Terminal::Table.new(
+  rows: data,
+  style: {
+    border_x: "", border_y: "", border_i: ""
+  }
 )
