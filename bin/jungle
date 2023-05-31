@@ -7,11 +7,9 @@ begin
   require "colorize"
   require "terminal-table"
 rescue LoadError
+  puts "Installing dependencies…"
   system("gem install colorize")
   system("gem install terminal-table")
-
-  require "colorize"
-  require "terminal-table"
 end
 
 def transformShaAndGraph(shaAndGraph)
