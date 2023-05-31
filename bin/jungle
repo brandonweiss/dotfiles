@@ -41,7 +41,7 @@ def transformAuthor(author)
   return unless author
 
   if author.match(/ /)
-    author = author.split(" ")[0]
+    author = author.split(" ").first
   end
 
   "<#{author}>".colorize(color: :blue, mode: :bold)
@@ -70,7 +70,6 @@ lines = `#{logCommand}`.split("\n")
 
 data = lines.map do |line|
   shaAndGraph, relativeTime, refs, subject, author = line.split("|split|")
-  author = transformAuthor(author)
 
   refsSubjectAuthor = subject ? "#{transformRefs(refs)} #{subject} #{transformAuthor(author)}" : nil
 
