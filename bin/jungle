@@ -3,8 +3,16 @@
 # git-jungle
 # git-vines
 
-require "colorize"
-require "terminal-table"
+begin
+  require "colorize"
+  require "terminal-table"
+rescue LoadError
+  system("gem install colorize")
+  system("gem install terminal-table")
+
+  require "colorize"
+  require "terminal-table"
+end
 
 def transformShaAndGraph(shaAndGraph)
   shaMatch = shaAndGraph.match(/(\w+)$/)
