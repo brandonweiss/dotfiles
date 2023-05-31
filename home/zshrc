@@ -1,0 +1,24 @@
+# Fig pre block. Keep at the top of this file.
+[[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.pre.zsh"
+
+eval "$(/opt/homebrew/bin/brew shellenv)"
+eval "$(starship init zsh)"
+
+DOTFILES_DIRECTORY=$(dirname $(dirname $(readlink ${(%):-%x})))
+source $DOTFILES_DIRECTORY/config/aliases
+
+PATH="./node_modules/.bin:$PATH"
+PATH="./bin:$PATH"
+PATH="$DOTFILES_DIRECTORY/bin:$PATH"
+
+. $(brew --prefix asdf)/libexec/asdf.sh
+
+# export EDITOR="code --wait"
+# export GIT_EDITOR="code --wait"
+
+function rm() {
+	rm-ruby $@
+}
+
+# Fig post block. Keep at the bottom of this file.
+[[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
