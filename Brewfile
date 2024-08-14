@@ -8,7 +8,7 @@ brew "trash"
 # Dependencies
 brew "gpg" # asdf nodejs plugin
 
-cask "appzapper"
+cask "appcleaner"
 cask "dash"
 cask "figma"
 cask "firefox@developer-edition"
