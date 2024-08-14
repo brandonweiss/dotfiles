@@ -13,5 +13,15 @@
   {
     "key": "shift+alt+cmd+c",
     "command": "copyRelativeFilePath"
+  },
+  {
+    "key": "alt+]",
+    "command": "-editor.action.inlineSuggest.showNext",
+    "when": "!editorReadonly"
+  },
+  {
+    "key": "alt+[",
+    "command": "-editor.action.inlineSuggest.showPrevious",
+    "when": "!editorReadonly"
   }
 ]

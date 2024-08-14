@@ -1,51 +1,21 @@
 {
-  "editor.fontFamily": "Operator Mono",
-  "editor.fontSize": 17,
-  "editor.formatOnSave": true,
-  "editor.formatOnPaste": true,
-  "editor.formatOnType": true,
-  "editor.rulers": [100],
-  "editor.find.addExtraSpaceOnTop": false,
-  "editor.scrollBeyondLastLine": false,
-  "editor.tabSize": 2,
-  "[markdown]": {
-    "editor.wordWrap": "wordWrapColumn",
-    "editor.wordWrapColumn": 100
+  "git.path" : "\/usr\/local\/bin\/git",
+  "[mdx]" : {
+    "editor.wordWrap" : "wordWrapColumn"
   },
-  "[mdx]": {
-    "editor.wordWrap": "wordWrapColumn",
-    "editor.wordWrapColumn": 100
-  },
-  "files.insertFinalNewline": true,
-  "files.trimTrailingWhitespace": true,
-  "problems.showCurrentInStatus": true,
-  "terminal.integrated.shell.osx": "/usr/local/bin/fish",
-  "search.exclude": {
-    "package-lock.json": true
-  },
-  "search.useGlobalIgnoreFiles": true,
-  "workbench.colorCustomizations": {
-    "terminal.ansiBlack": "#646464",
-    "terminal.ansiBrightBlack": "#646464",
-    "terminal.ansiRed": "#F78D8C",
-    "terminal.ansiBrightRed": "#F78D8C",
-    "terminal.ansiGreen": "#A8D4A9",
-    "terminal.ansiBrightGreen": "#A8D4A9",
-    "terminal.ansiYellow": "#FFD479",
-    "terminal.ansiBrightYellow": "#FFD479",
-    "terminal.ansiBlue": "#69ACDA",
-    "terminal.ansiBrightBlue": "#69ACDA",
-    "terminal.ansiMagenta": "#D7ACD6",
-    "terminal.ansiBrightMagenta": "#D7ACD6",
-    "terminal.ansiCyan": "#76D4D6",
-    "terminal.ansiBrightCyan": "#76D4D6",
-    "terminal.ansiWhite": "#D6D6D6",
-    "terminal.ansiBrightWhite": "#D6D6D6"
-  },
-  "workbench.colorTheme": "One Dark",
-  "workbench.iconTheme": "city-lights-icons-vsc",
-  "workbench.startupEditor": "newUntitledFile",
-  "editor.tokenColorCustomizations": {
+  "editor.scrollBeyondLastLine" : false,
+  "editor.fontFamily" : "Operator Mono",
+  "workbench.colorTheme" : "One Dark",
+  "workbench.iconTheme" : "city-lights-icons-vsc",
+  "search.useGlobalIgnoreFiles" : true,
+  "editor.tabSize" : 2,
+  "editor.find.addExtraSpaceOnTop" : false,
+  "files.trimTrailingWhitespace" : true,
+  "editor.fontSize" : 17,
+  "eslint.validate" : [
+    "mdx"
+  ],
+  "editor.tokenColorCustomizations" : {
     "textMateRules": [
       {
         "name": "One Dark italic",
@@ -82,5 +52,68 @@
         }
       }
     ]
+  },
+  "eslint.probe" : [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "html",
+    "vue",
+    "markdown",
+    "mdx"
+  ],
+  "workbench.colorCustomizations" : {
+    "terminal.ansiBrightCyan" : "#76D4D6",
+    "terminal.ansiGreen" : "#A8D4A9",
+    "terminal.ansiBrightYellow" : "#FFD479",
+    "terminal.ansiBrightRed" : "#F78D8C",
+    "terminal.ansiYellow" : "#FFD479",
+    "terminal.ansiBlue" : "#69ACDA",
+    "terminal.ansiMagenta" : "#D7ACD6",
+    "terminal.ansiCyan" : "#76D4D6",
+    "terminal.ansiBrightWhite" : "#D6D6D6",
+    "terminal.ansiBlack" : "#646464",
+    "terminal.ansiBrightMagenta" : "#D7ACD6",
+    "terminal.ansiWhite" : "#D6D6D6",
+    "terminal.ansiBrightBlue" : "#69ACDA",
+    "terminal.ansiRed" : "#F78D8C",
+    "terminal.ansiBrightBlack" : "#646464",
+    "terminal.ansiBrightGreen" : "#A8D4A9"
+  },
+  "editor.wordWrapColumn" : 100,
+  // "terminal.integrated.shell.osx" : "\/bin\/bash",
+  "terminal.integrated.shell.osx" : "\/opt\/homebrew\/bin\/fish",
+  "files.insertFinalNewline" : true,
+  "[fish]" : {
+    "editor.defaultFormatter" : "bmalehorn.vscode-fish"
+  },
+  "[markdown]" : {
+    "editor.wordWrap" : "wordWrapColumn"
+  },
+  "workbench.startupEditor" : "newUntitledFile",
+  "editor.formatOnPaste" : true,
+  "editor.formatOnSave" : true,
+  "[json]" : {
+    "editor.defaultFormatter" : "esbenp.prettier-vscode"
+  },
+  "search.exclude" : {
+    "package-lock.json" : true
+  },
+  "[javascriptreact]" : {
+    "editor.defaultFormatter" : "esbenp.prettier-vscode"
+  },
+  "editor.rulers" : [
+    100
+  ],
+  "problems.showCurrentInStatus" : true,
+  "editor.accessibilitySupport" : "off",
+  "editor.formatOnType" : true,
+  "[html]" : {
+    "editor.defaultFormatter" : "esbenp.prettier-vscode"
+  },
+  "terminal.integrated.automationShell.linux": "",
+  "terminal.integrated.env.osx": {
+    "FIG_NEW_SESSION": "1"
   }
 }
