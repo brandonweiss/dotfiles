@@ -34,12 +34,12 @@ files_in("config").each do |to|
   FileUtils.symlink(to, from, force: true)
 end
 
-puts
+# puts
 
-files_in("vscode").each do |to|
-  relative_to = to.sub("#{dotfiles_directory}/vscode/", "")
-  from = "#{Dir.home}/Library/Application\ Support/Code/User/#{relative_to}"
+# files_in("vscode").each do |to|
+#   relative_to = to.sub("#{dotfiles_directory}/vscode/", "")
+#   from = "#{Dir.home}/Library/Application\ Support/Code/User/#{relative_to}"
 
-  log(from, to)
-  FileUtils.symlink(to, from, force: true)
-end
+#   log(from, to)
+#   FileUtils.symlink(to, from, force: true)
+# end
