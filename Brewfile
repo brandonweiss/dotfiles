@@ -23,6 +23,7 @@ cask "raycast"
 cask "slack"
 cask "transmission"
 cask "tower"
+cask "tuple"
 cask "visual-studio-code"
 cask "zed"
 
