@@ -12,6 +12,7 @@ brew "gpg" # asdf nodejs plugin
 cask "appcleaner"
 cask "backblaze"
 cask "dash"
+cask "downie"
 cask "figma"
 cask "firefox@developer-edition"
 cask "hey"
@@ -19,8 +20,11 @@ cask "iina"
 cask "insomnia"
 cask "netnewswire"
 cask "obsidian"
+cask "orbstack"
 cask "raycast"
 cask "slack"
+cask "sloth"
+cask "tableplus"
 cask "transmission"
 cask "tower"
 cask "tuple"
@@ -35,6 +39,7 @@ mas "Mactracker", id: 430_255_202
 mas "Monodraw", id: 920_404_675
 mas "Movist", id: 461_788_075
 mas "Parcel", id: 639_968_404
+mas "Permute", id: 1_444_998_321
 mas "Soulver 3", id: 1_508_732_804
 mas "System Color Picker", id: 1_545_870_783
 
