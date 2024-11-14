@@ -27,7 +27,6 @@ mas "DaisyDisk", id: 411_643_860
 mas "Gifski", id: 1_351_639_930
 mas "Kaleidoscope", id: 587_512_244
 mas "Mactracker", id: 430_255_202
-mas "Magnet", id: 441_258_766
 mas "Monodraw", id: 920_404_675
 mas "Movist", id: 461_788_075
 mas "Parcel", id: 639_968_404
