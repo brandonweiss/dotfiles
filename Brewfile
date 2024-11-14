@@ -32,7 +32,6 @@ mas "Movist", id: 461_788_075
 mas "Parcel", id: 639_968_404
 mas "Soulver 3", id: 1_508_732_804
 mas "System Color Picker", id: 1_545_870_783
-mas "Xcode", id: 497_799_835
 
 tap "brandonweiss/homebrew-tap"
 brew "brandonweiss/tap/git-aliae", args: ["HEAD"]
