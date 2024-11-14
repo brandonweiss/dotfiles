@@ -9,6 +9,7 @@ brew "trash"
 brew "gpg" # asdf nodejs plugin
 
 cask "appcleaner"
+cask "backblaze"
 cask "dash"
 cask "figma"
 cask "firefox@developer-edition"
