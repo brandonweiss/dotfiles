@@ -29,6 +29,7 @@ cask "transmission"
 cask "tower"
 cask "tuple"
 cask "visual-studio-code"
+cask "warp"
 cask "zed"
 
 mas "1Blocker", id: 1_107_421_413
