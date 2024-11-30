@@ -1,5 +1,6 @@
 eval "$(/opt/homebrew/bin/brew shellenv)"
 eval "$(starship init zsh)"
+eval "$(mise activate zsh)"
 
 DOTFILES_DIRECTORY=$(dirname $(dirname $(readlink ${(%):-%x})))
 source $DOTFILES_DIRECTORY/config/aliases
@@ -7,8 +8,6 @@ source $DOTFILES_DIRECTORY/config/aliases
 PATH="./node_modules/.bin:$PATH"
 PATH="./bin:$PATH"
 PATH="$DOTFILES_DIRECTORY/bin:$PATH"
-
-. $(brew --prefix asdf)/libexec/asdf.sh
 
 # export EDITOR="code --wait"
 # export GIT_EDITOR="code --wait"
