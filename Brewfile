@@ -1,13 +1,9 @@
-brew "asdf"
 brew "git"
 brew "mas"
 brew "mise"
 brew "sqlite"
 brew "starship"
 brew "trash"
-
-# Dependencies
-brew "gpg" # asdf nodejs plugin
 
 cask "appcleaner"
 cask "backblaze"
