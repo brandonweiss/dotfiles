@@ -7,6 +7,7 @@ brew "trash"
 
 cask "appcleaner"
 cask "backblaze"
+cask "cleanshot"
 cask "dash"
 cask "downie"
 cask "figma"
