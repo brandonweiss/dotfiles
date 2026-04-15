@@ -7,30 +7,70 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
+	"agent_servers": {
+		"claude-acp": {
+			"type": "registry",
+		},
+	},
+	"agent": {
+		"default_profile": "write",
+		"default_model": {
+			"provider": "anthropic",
+			"model": "claude-sonnet-4-5-latest",
+			"enable_thinking": false,
+		},
+		"inline_assistant_model": {
+			"provider": "anthropic",
+			"model": "claude-sonnet-4-5-latest",
+		},
+	},
+	"autosave": "on_focus_change",
+	"cursor_shape": "bar",
+	"colorize_brackets": true,
+	"confirm_quit": false,
+	"edit_predictions": {
+		"provider": "zed",
+		"mode": "subtle",
+		"copilot": {
+			"proxy": null,
+			"proxy_no_verify": null,
+		},
+		"enabled_in_text_threads": false,
+	},
+	"file_types": {
+		"HTML+ERB": ["erb"],
+	},
+	"icon_theme": "Catppuccin Frappé",
 	"hard_tabs": true,
 	"tab_size": 2,
 	"theme": "One Dark",
 	"buffer_font_family": "Operator Mono Book",
-	"buffer_font_size": 17,
+	"buffer_font_size": 17.0,
 	"experimental.theme_overrides": {},
 	"format_on_save": "on",
 	"indent_guides": {
 		"active_line_width": 2,
-		"coloring": "indent_aware"
+		"coloring": "indent_aware",
 	},
 	"languages": {
 		"Ruby": {
-			"language_servers": ["ruby-lsp", "!rubocop"]
-		}
+			"language_servers": ["ruby-lsp", "!solargraph", "!rubocop"],
+		},
+		"HTML+ERB": {
+			"language_servers": ["herb", "ruby-lsp"],
+		},
 	},
 	"lsp": {
 		"ruby-lsp": {
 			"initialization_options": {
 				"enabledFeatures": {
-					"diagnostics": false
-				}
-			}
-		}
+					"diagnostics": false,
+				},
+			},
+		},
 	},
-	"use_autoclose": false
+	"soft_wrap": "bounded",
+	"preferred_line_length": 120,
+	"wrap_guides": [100, 120],
+	"use_autoclose": false,
 }
