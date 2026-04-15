@@ -12,12 +12,46 @@
 	pager          = "diff-so-fancy | less --tabs=4 -RFX"
 	untrackedCache = true
 
+[init]
+	defaultBranch = main
+
+[column]
+	ui = auto
+
+[branch]
+	sort = committerdate
+
 [diff]
-	# For Github-style word diffs
-	wordRegex = [^[:space:]]
+	algorithm = histogram
+	wordRegex = [^[:space:]] # For Github-style word diffs
 	tool = Kaleidoscope
 	compaction-heuristic = true
-	colorMoved = default
+	colorMoved = plain
+	mnemonicPrefix = true
+	renames = true
+
+[fetch]
+	prune = true
+	pruneTags = true
+
+[push]
+	default = simple
+	autoSetupRemote = true
+	followTags = true
+
+[pull]
+	rebase = true
+
+[rebase]
+	autoSquash = true
+	autoStash = true
+
+[help]
+	autoCorrect = immediate
+
+[rerere]
+	enabled = true
+	autoUpdate = true
 
 [difftool]
 	prompt = false
@@ -26,6 +60,7 @@
 	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
 
 [merge]
+	conflictStyle = zdiff3
 	tool = Kaleidoscope
 
 [mergetool]
@@ -53,16 +88,6 @@
 	oldHighlight  = "red bold 52"
 	newNormal     = "green bold"
 	newHighlight  = "green bold 22"
-
-[push]
-	default = current
-
-[fetch]
-	prune = true
-
-[rebase]
-	autosquash = true
-	autoStash = true
 
 [remote "origin"]
 	# fetch = +refs/pull/*/head:refs/remotes/origin/pull/*
@@ -105,5 +130,6 @@
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
-[init]
-	defaultBranch = main
+
+[gitbutler]
+	gitbutlerCommitter = 0
