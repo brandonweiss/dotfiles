@@ -70,6 +70,9 @@
 		},
 	},
 	"soft_wrap": "bounded",
+	"terminal": {
+		"font_fallbacks": ["Symbols Nerd Font Mono"],
+	},
 	"preferred_line_length": 120,
 	"wrap_guides": [100, 120],
 	"use_autoclose": false,
