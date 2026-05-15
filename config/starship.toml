@@ -26,12 +26,22 @@ style = "blue"
 truncate_to_repo = false
 truncation_length = 4
 
-[git_branch]
-symbol = "🌱 "
-style = "242"
-
 [git_status]
+format = '([$all_status$ahead_behind]($style) )'
 style = "cyan"
+ahead = " "
+behind = " "
+diverged = "   "
+conflicted = "   "
+untracked = " "
+modified = " "
+staged = " "
+renamed = " "
+deleted = " "
+stashed = " "
 
 [nodejs]
-symbol = "[⬢](bold green) "
+symbol = "  "
+
+[ruby]
+symbol = "  "
