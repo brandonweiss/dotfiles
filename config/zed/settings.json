@@ -7,42 +7,34 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
-	"cli_default_open_behavior": "new_window",
-	"project_panel": {
+	"agent": {
+		"default_model": {
+			"provider": "anthropic",
+			"model": "claude-sonnet-4-5-latest",
+			"enable_thinking": false,
+		},
+		"default_profile": "write",
 		"dock": "left",
-	},
-	"outline_panel": {
-		"dock": "left",
-	},
-	"collaboration_panel": {
-		"dock": "left",
-	},
-	"git_panel": {
-		"tree_view": true,
-		"dock": "left",
+		"inline_assistant_model": {
+			"provider": "anthropic",
+			"model": "claude-sonnet-4-5-latest",
+		},
 	},
 	"agent_servers": {
 		"claude-acp": {
 			"type": "registry",
 		},
 	},
-	"agent": {
-		"dock": "left",
-		"default_profile": "write",
-		"default_model": {
-			"provider": "anthropic",
-			"model": "claude-sonnet-4-5-latest",
-			"enable_thinking": false,
-		},
-		"inline_assistant_model": {
-			"provider": "anthropic",
-			"model": "claude-sonnet-4-5-latest",
-		},
-	},
 	"autosave": "on_focus_change",
-	"cursor_shape": "bar",
+	"buffer_font_family": "Operator Mono Book",
+	"buffer_font_size": 17.0,
+	"cli_default_open_behavior": "new_window",
+	"collaboration_panel": {
+		"dock": "left",
+	},
 	"colorize_brackets": true,
 	"confirm_quit": false,
+	"cursor_shape": "bar",
 	"edit_predictions": {
 		"provider": "zed",
 		"mode": "subtle",
@@ -52,27 +44,27 @@
 		},
 		"enabled_in_text_threads": false,
 	},
+	"experimental.theme_overrides": {},
 	"file_types": {
 		"HTML+ERB": ["erb"],
 	},
-	"icon_theme": "Catppuccin Frappé",
-	"hard_tabs": true,
-	"tab_size": 2,
-	"theme": "One Dark",
-	"buffer_font_family": "Operator Mono Book",
-	"buffer_font_size": 17.0,
-	"experimental.theme_overrides": {},
 	"format_on_save": "on",
+	"git_panel": {
+		"tree_view": true,
+		"dock": "left",
+	},
+	"hard_tabs": true,
+	"icon_theme": "Catppuccin Frappé",
 	"indent_guides": {
 		"active_line_width": 2,
 		"coloring": "indent_aware",
 	},
 	"languages": {
-		"Ruby": {
-			"language_servers": ["ruby-lsp", "!solargraph", "!rubocop"],
-		},
 		"HTML+ERB": {
 			"language_servers": ["herb", "ruby-lsp"],
+		},
+		"Ruby": {
+			"language_servers": ["ruby-lsp", "!solargraph", "!rubocop"],
 		},
 	},
 	"lsp": {
@@ -84,11 +76,19 @@
 			},
 		},
 	},
+	"outline_panel": {
+		"dock": "left",
+	},
+	"preferred_line_length": 120,
+	"project_panel": {
+		"dock": "left",
+	},
 	"soft_wrap": "bounded",
+	"tab_size": 2,
 	"terminal": {
 		"font_fallbacks": ["Symbols Nerd Font Mono"],
 	},
-	"preferred_line_length": 120,
-	"wrap_guides": [100, 120],
+	"theme": "One Dark",
 	"use_autoclose": false,
+	"wrap_guides": [100, 120],
 }
