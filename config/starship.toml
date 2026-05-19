@@ -5,10 +5,8 @@ format = """\
   $git_branch\
   $git_commit\
   $git_state\
-  $git_status\
-  $golang\
-  $nodejs\
   $ruby\
+  $nodejs\
   $cmd_duration\
   $line_break\
   $jobs\
