@@ -1,3 +1,4 @@
+brew "caddy"
 brew "git"
 brew "mas"
 brew "mise"
