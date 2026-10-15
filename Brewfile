@@ -22,16 +22,12 @@ cask "netnewswire"
 cask "obsidian"
 cask "orbstack"
 cask "raycast"
-cask "slack"
 cask "sloth"
 cask "tableplus"
 cask "transmission"
-cask "tuple"
-cask "visual-studio-code"
 cask "warp"
 cask "zed"
 
-mas "1Blocker", id: 1_365_531_024
 mas "DaisyDisk", id: 411_643_860
 mas "Gifski", id: 1_351_639_930
 mas "Mactracker", id: 430_255_202
