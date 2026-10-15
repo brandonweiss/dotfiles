@@ -9,8 +9,8 @@ PATH="./node_modules/.bin:$PATH"
 PATH="./bin:$PATH"
 PATH="$DOTFILES_DIRECTORY/bin:$PATH"
 
-# export EDITOR="code --wait"
-# export GIT_EDITOR="code --wait"
+export EDITOR="zed --wait"
+export GIT_EDITOR="zed --wait"
 
 function rm() {
 	rm-ruby $@
